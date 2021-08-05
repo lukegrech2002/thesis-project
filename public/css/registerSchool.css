@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap");
+
+* {
+  font-family: "Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+}
+
+body {
+  background-color: #dfe3ee;
+  color: black;
+}
+
+form > .register-school-container {
+  width: 70%;
+  margin: auto;
+  padding: 1em 8em;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+
+.register-school-container-div{
+  background-color: #ffffff;
+  margin: auto;
+  padding: 3em;
+  border: 1px solid #E3E3E3;
+  -moz-box-shadow: 0px 0px 8px #ddd;
+  -webkit-box-shadow: 0px 0px 8px #DDD;
+  box-shadow: 0px 0px 8px #DDD;
+}
+
+.form-control {
+  padding-bottom: 10px;
+  position: relative;
+}
+
+input[type="text"]{
+  width: 100%;
+  display: inline-block;
+  padding: 12px 20px;
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+  box-sizing: border-box;
+  border: 1px solid #929292;
+  border-radius: 4px;
+  background-color: #ffffff;
+  outline: none;
+}
+
+.form-control > input[type="password"]{
+  width: 100%;
+  display: inline-block;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 1px solid #929292;
+  border-radius: 4px;
+  background-color: #ffffff;
+  outline: none;
+}
+
+.form-control input:focus {
+  outline: 0;
+  border-color: #777;
+}
+
+.form-control.success input {
+  border-color: #2ecc71;
+}
+
+.form-control.error input {
+  border-color: #e74c3c;
+}
+
+.form-control i {
+  visibility: hidden;
+  position: absolute;
+  top: 40px;
+  right: 10px;
+}
+
+.form-control.success i.fa-check-circle {
+  color: #2ecc71;
+  visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+  color: #e74c3c;
+  visibility: visible;
+}
+
+.form-control small {
+  color: #e74c3c;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.form-control.error small {
+  visibility: visible;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 100;
+  margin-top: -0.5em;
+  margin-bottom: 0.5em;
+}
+
+
+/* Set a style for all buttons */
+.register-btn,
+.login-nav,
+.register-nav {
+  background-color: #0C0032;
+  color: #f0f0f0;
+  padding: 0.8em;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  outline: none;
+  font-size: 1em;
+}
+
+.login-nav:hover,
+.register-btn:hover,
+.register-nav:hover {
+  background-color: #201350;
+}
+
+.register-school-container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+#registerresult {
+  color: red;
+}
+
+.pic-upload-container{
+	width: 200px;
+  margin: auto;
+  margin-bottom: 1em;
+	font-family: sans-serif;
+}
+
+.pic-upload-container label{
+	display: block;
+	max-width: 200px;
+    margin: 0 auto 15px;
+	text-align: center;
+    word-wrap: break-word;
+	color: #fff;
+}
+
+.hidden, #uploadImg:not(.hidden) + label{
+	display: none;
+}
+
+#profilePictureField{
+	display: none;
+  margin: 0 auto;
+}
+
+#upload{
+	display: block;
+	padding: 10px 25px;
+	border: 0;
+	margin: 0 auto;
+	font-size: 15px;
+	letter-spacing: 0.04em;
+	cursor: pointer;
+	background: #0C0032;
+	color: #fff;
+  outline: none;
+  border-radius: 4px;
+	transition: .2s ease-in-out;
+}
+
+img{
+	display: block;
+  margin: 0 auto 15px;
+  width: 100%
+}
+
+.note{
+  text-align: center;
+  margin: auto;
+}
+
+/* Or */
+h3 {
+  display: flex;
+  flex-direction: row;
+  font-size: 1em;
+}
+
+h3:before,
+h3:after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 1px solid#696969;
+  margin: auto;
+  margin-left: 1.2em;
+  margin-right: 1.2em;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    background-color: rgb(0, 1, 19);
+  }
+  form > .register-school-container {
+    width: 80%;
+    padding: 1em 1.5em;
+  }
+}
