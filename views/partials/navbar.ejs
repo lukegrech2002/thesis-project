@@ -1,0 +1,92 @@
+<link rel="stylesheet" type="text/css" href="css/navbar.css"> 
+<link rel="stylesheet" type="text/css" href="assets/icons/css/all.css"> 
+<div class="s-layout">
+   <!-- Sidebar -->
+   <div class="s-layout__sidebar">
+      <a class="s-sidebar__trigger">
+         <i class="fa fa-bars"></i>
+      </a>   
+      <nav class="s-sidebar__nav">
+         <div class="profile-div">
+            <div class="profile-pic-container">
+               <img id="profile-pic" src="https://<%= ipAddress %>:3000/uploads/<%= loggedInUser.profile_picture %>" alt="profile image">
+               <div class='status-circle'></div>
+            </div>
+            <p><%= loggedInUser.first_name %> <%= loggedInUser.last_name %><p>
+         </div> 
+         <ul>
+            <li>
+               <a class="s-sidebar__nav-link" href="/">
+                  <i class="fa fa-home"></i><em>Home</em>
+               </a>
+            </li>
+            <li>
+               <a class="s-sidebar__nav-link" href="/account-management">
+                 <i class="fa fa-user"></i><em>My Profile</em>
+               </a>
+            </li>
+            <!-- If teacher account  -->
+            <% if(loggedInUser.teacher_account === "yes"){ %> 
+            <li>
+               <a class="s-sidebar__nav-link" href="/students-management">
+                  <i class="fas fa-users-cog"></i><em>Students Management</em>
+               </a>
+            </li>
+            <li>
+               <a class="s-sidebar__nav-link" href="/create-lecture">
+                  <i class="fas fa-plus-square"></i><em>Create Lecture</em>
+               </a>
+            </li>
+            <% } %>
+            <!-- If student account  -->
+            <% if(loggedInUser.teacher_account === "no"){ %> 
+               <li>
+                  <a class="s-sidebar__nav-link" href="/teacher-details">
+                     <i class="fas fa-chalkboard-teacher"></i><em>Teacher Details</em>
+                  </a>
+               </li>    
+            <% } %>
+            <li>
+               <a class="s-sidebar__nav-link" href="/join-lecture">
+                  <i class="fas fa-file-signature"></i><em>Lecture Enrollment</em>
+               </a>
+            </li>
+            <li>
+               <a class="s-sidebar__nav-link" href="/covid-info-center">
+                  <i class="fas fa-exclamation-triangle"></i><em>COVID-19 Info Center</em>
+               </a>
+            </li>
+            <li>
+               <a class="s-sidebar__nav-link" href="/create-group">
+                  <i class="fas fa-user-plus"></i><em>Create Group</em>
+               </a>
+            </li>
+            <li>
+               <a class="s-sidebar__nav-link" href="/join-group">
+                  <i class="fas fa-users"></i><em>Join Group</em>
+               </a>
+            </li>
+            <li>
+               <a class="s-sidebar__nav-link" href="/symptom-history">
+                  <i class="fas fa-head-side-cough"></i><em>Symptom History</em>
+               </a>
+            </li>
+            <li>
+               <a class="s-sidebar__nav-link" href="/help-and-support">
+                  <i class="far fa-question-circle"></i><em>Help & Support</em>
+               </a>
+            </li>
+            <li>
+               <a class="s-sidebar__nav-link" href="/terms-and-conditions">
+                  <i class="fas fa-sticky-note"></i><em>Terms & Conditions</em>
+               </a>
+            </li>
+            <li>
+               <a class="s-sidebar__nav-link" href="/log-out">
+                  <i class="fas fa-door-open"></i><em>Log Out</em>
+               </a>
+            </li>
+         </ul>
+      </nav>
+   </div>
+</div>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Create Lecture | Scorona</title>
+    <link rel="stylesheet" type="text/css" href="css/createLecture.css"> 
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/dark.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar-div">
+            <%- include('partials/navbar') %>
+        </div>
+        <div class="create-lecture-div-container">
+            <h1>Create Lecture</h1>
+            <form action="/create-lecture" method="post" id="createLectureForm">
+                <div class="create-lecture-div">
+                    <label for="createLectureSubject"><b>Subject</b></label>
+                    <input type="text" id="createLectureSubject" name="createLectureSubject" placeholder="Enter Subject" required>
+                    <label for="createLectureDate"><b>Date</b></label>
+                    <input type="date" id="createLectureDate" name="createLectureDate" required><br>
+                    <label for="createLectureStartTime"><b>Start Time</b></label>
+                    <input type="time" id="createLectureStartTime" name="createLectureStartTime" required><br>
+                    <label for="createLectureEndTime"><b>End Time</b></label>
+                    <input type="time" id="createLectureEndTime" name="createLectureEndTime" required><br>
+                    <label for="createLectureClass"><b>Class</b></label>
+                    <input type="text" id="createLectureClass" name="createLectureClass" placeholder="Enter Class Number" required>
+                    <label for="createLectureSchool"><b>School</b></label>
+                    <input type="text" id="createLectureSchool" name="createLectureSchool" placeholder="Enter School" required>
+                    <label for="createLectureLocation"><b>Location</b></label>
+                    <input type="text" id="createLectureLocation" name="createLectureLocation" placeholder="Enter Location" required>
+                    <label for="createLectureOnlineRoomPassword"><b>Online Room Password</b></label>
+                    <input type="password" id="createLectureOnlineRoomPassword" name="createLectureOnlineRoomPassword" placeholder="Enter Online Room Password" required>
+                    <label for="createLectureAdditionalNotes"><b>Additional Notes</b></label>
+                    <input type="text" id="createLectureAdditionalNotes" name="createLectureAdditionalNotes" placeholder="Enter Additional Notes" required>
+
+                    <button class="create-lecture-btn" id="createLectureBtn" type="submit">Create Lecture</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+    //Using flatpickr for lecture date
+    flatpickr("#createLectureDate", {
+        //inline: true,
+        altInput: true,
+        altFormat: "F j, Y",
+        dateFormat: "D M d Y",  //Capital D for day of the week
+        minDate: "today", //Not allowing date selection before current day
+        maxDate: new Date().fp_incr(730) //Not allowing date selection longer than 2 years from current day
+    });
+    flatpickr("#createLectureStartTime", {
+        enableTime: true,
+        noCalendar: true,
+        dateFormat: "H:i",
+        time_24hr: true
+    });
+    flatpickr("#createLectureEndTime", {
+        enableTime: true,
+        noCalendar: true,
+        dateFormat: "H:i",
+        time_24hr: true,
+    });
+</script>
+</html>

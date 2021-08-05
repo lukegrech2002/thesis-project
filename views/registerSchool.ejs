@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>School Registration | Scorona</title>
+    <link rel="stylesheet" type="text/css" href="css/registerSchool.css"> 
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body> 
+    <form action="/school-registration" method="post" id="registerSchoolForm">
+        <div class="register-school-container">  
+            <div class="register-school-container-div">  
+                <h1>School Registration</h1> 
+                <p class="note">It is important to keep the Enrollment Password safe as students need it to enroll. Students will use your contact details to request the password to enroll.<p></p>      
+                <input type="text" id="registerSchoolNameField" placeholder="School Name" name="schoolName" required>
+                <div class="form-control">
+                    <input type="password" id="registerSchoolPasswordField" placeholder="Password" name="schoolEnrollmentPassword" required>
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+                <div class="form-control">
+                    <input type="password" id="registerSchoolConfirmPasswordField" placeholder="Confirm Password" name="school_enrollment_confirmPassword" required>
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+
+                <button class="register-btn" id="registerBtn" type="submit">Register School</button>
+                <h3>or</h3>
+                <button class="login-nav" id="loginNav" onclick="navigateToLogin()" type="button">Log Into Existing Account</button>
+                <button class="register-nav" id="registerNav" onclick="navigateToRegister()" type="button">Create An Account</button>
+            </div>
+        </div>
+    </form>     
+</body>
+<script>
+    let form = document.getElementById('registerSchoolForm');
+    let password = document.getElementById('registerSchoolPasswordField');
+    let password2 = document.getElementById('registerSchoolConfirmPasswordField');
+    
+    let passwordValidCheck = false;
+    let confirmPasswordValidCheck = false;
+
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        checkInputs();
+        if ((passwordValidCheck = true) && (confirmPasswordValidCheck = true)){
+            form.submit();
+        }
+    });
+
+    checkInputs = () => {
+        let passwordValue = password.value.trim();
+        let password2Value = password2.value.trim();
+        
+        if(passwordValue === '') {
+            setErrorFor(password, 'Please enter a password');
+            passwordValidCheck = false;
+        }else{
+            setSuccessFor(password);
+            passwordValidCheck = true;
+        }
+        
+        if(password2Value === '') {
+            setErrorFor(password2, 'Please confirm your password');
+            confirmPasswordValidCheck = false;
+        }else if(passwordValue !== password2Value) {
+            setErrorFor(password2, 'Passwords do not match');
+            confirmPasswordValidCheck = false;
+        }else{
+            setSuccessFor(password2);
+            confirmPasswordValidCheck = true;
+        }
+    }
+
+    setErrorFor = (input, message) => {
+        let formControl = input.parentElement;
+        let small = formControl.querySelector('small');
+        formControl.className = 'form-control error';
+        small.innerText = message;
+    }
+
+    setSuccessFor = (input) => {
+        let formControl = input.parentElement;
+        formControl.className = 'form-control success';
+    }
+
+    function navigateToLogin() {
+        window.location = '/login';
+    }
+
+    function navigateToRegister()  {
+        window.location = '/register';
+    }
+</script>
+</html>

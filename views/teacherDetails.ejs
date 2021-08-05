@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Teacher Details | Scorona</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css"> 
+    <link rel="stylesheet" type="text/css" href="/assets/icons/css/all.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar-div">
+            <%- include('partials/navbar') %>
+        </div>
+        <div class="teachers-details-div-container">
+            <h1>Teacher Details</h1>
+            <% if(data.length){ %>
+                <div class="top-container">
+                    <div class="dropdown-div">
+                        <div class="dropdown">
+                            <button class="dropbtn">Sort Teachers</button>
+                            <div class="dropdown-content">
+                                <button onclick="sortFirstNameAscending()">First Name Ascending</button>
+                                <button onclick="sortFirstNameDescending()">First Name Descending</button>
+                                <button onclick="sortLastNameAscending()">Last Name Ascending</button>
+                                <button onclick="sortLastNameDescending()">Last Name Descending</button>
+                                <button onclick="sortUsernameAscending()">Username Ascending</button>
+                                <button onclick="sortUsernameDescending()">Username Descending</button>
+                                <button onclick="sortEmailAscending()">Email Ascending</button>
+                                <button onclick="sortEmailDescending()">Email Descending</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Teachers Table -->
+                <table id="teachersTable">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Username</th>
+                            <th>Email Address</th>								
+                        </tr>
+                    <thead>
+                    <tbody id="teachersTableData">
+                            <% for(let i = 0; i < data.length; i++) { %>
+                                <tr>
+                                    <td>
+                                        <div class="profile-pic-container">
+                                            <img id="profile-pic" src="https://<%= ipAddress %>:3000/uploads/<%=data[i].profile_picture%>" alt="profile image">
+                                            <% if(data[i].status === 'online'){ %>
+                                                <div class='status-circle' style="background-color: rgb(2, 194, 2);"></div>
+                                            <% }else{ %>
+                                                <div class='status-circle' style="background-color: rgb(235, 0, 0);"></div>
+                                            <% } %>
+                                        </div>
+                                    </td>
+                                    <td><%=data[i].first_name%></td>
+                                    <td><%=data[i].last_name%></td>
+                                    <td><%=data[i].username%></td>
+                                    <td><%=data[i].email_address%></td>
+                                </tr>
+                            <% } %>
+                    </tbody>
+                </table>
+            <% }else{ %>
+                <p class='no-teachers-enrolled'>No teachers enrolled</p>
+            <% } %>
+        </div>
+    </div>
+</body>
+<script>
+    const tbody = document.getElementById("teachersTableData");
+    function tableSort(colNum, cmp) {
+    let rows = [...tbody.rows];
+        rows.sort((a, b) => cmp(a.cells[colNum].textContent, b.cells[colNum].textContent))
+        .map(row => tbody.appendChild(row));
+    }
+
+    function sortFirstNameAscending() {
+        tableSort(1, (a, b) => a.localeCompare(b));
+    }
+
+    function sortFirstNameDescending() {
+        tableSort(1, (a, b) => b.localeCompare(a));
+    }
+
+    function sortLastNameAscending() {
+        tableSort(1, (a, b) => a.localeCompare(b));
+    }
+
+    function sortLastNameDescending() {
+        tableSort(1, (a, b) => b.localeCompare(a));
+    }
+
+    function sortUsernameAscending() {
+        tableSort(1, (a, b) => a.localeCompare(b));
+    }
+
+    function sortUsernameDescending() {
+        tableSort(1, (a, b) => b.localeCompare(a));
+    }
+
+    function sortEmailAscending() {
+        tableSort(1, (a, b) => a.localeCompare(b));
+    }
+
+    function sortEmailDescending() {
+        tableSort(1, (a, b) => b.localeCompare(a));
+    }
+</script>
+</html>

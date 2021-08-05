@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Create Group | Scorona</title>
+    <link rel="stylesheet" type="text/css" href="/css/group.css"> 
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class="create-group-container">
+        <div class="navbar-div">
+            <%- include('partials/navbar') %>
+        </div>
+        <div class="create-group-div-container">
+            <h1>Create Group</h1>
+            <form action="/create-group" method="post" id="createGroupForm">
+                <div class="create-group-div">
+                    <input type="text" id="createGroupName" name="createGroupName" placeholder="Enter Group Name" required>
+                    <input type="password" id="createGroupPassword" name="createGroupPassword" placeholder="Enter Group Password" required>
+                    <p class="error-message"><%= message.error %></p>
+                    <p class="success-message"><%= message.success %></p>
+                    <button class="create-group-btn" id="createGroupBtn" type="submit">Create Group</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

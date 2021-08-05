@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Join Online Lecture | Scorona</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css"> 
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Join Room</h1>
+    <div class="room-login-container">
+        <div id="roomLoginForm" class="room-login-form"> 
+            <div class="lecture-details-div" id="lectureDetailsDiv">
+            <h2>Lecture Details</h2>
+            <p><strong>Room ID:</strong> <%= loginRoomID %></p>
+            <p><strong>Subject:</strong> <%= lectureDetails.subject %></p>
+            <p><strong>Teacher:</strong> <%= lectureDetails.teacher_name %></p>
+            <p><strong>Start Time:</strong> <%= lectureDetails.start_time %></p>
+            <p><strong>End Time:</strong> <%= lectureDetails.end_time %></p>
+            <p><strong>Additional Notes:</strong> <%= lectureDetails.additional_notes %></p>
+        </div>
+        <input type="password" id="roomLoginPasswordField" placeholder="Enter Room Password" name="roomLoginPassword" required>
+        <p class="room-login-result" id="roomLoginResult"></p>
+
+        <label for="roomLoginAudio"><b>Audio</b></label>
+        <label class="form-switch">
+            <input id="roomLoginAudio" type="checkbox">
+            <i></i>
+        </label>
+        <p id="text"></p>
+        <label for="roomLoginVideo"><b>Video</b></label>
+        <label class="form-switch">
+            <input id="roomLoginVideo" type="checkbox" checked>
+            <i></i>
+        </label>
+        <button class="room-login-btn" id="roomLoginBtn" data-url="<%= loginRoomID %>">Join Room</button>
+        <button class="home-nav" id="homeNav" type="button" onclick="navigateToHome()">Home</button>
+    </div>
+</body>
+<script>
+    let roomLoginAudio;
+    let roomLoginVideo;
+
+    navigateToHome = () => {
+        window.location = '/';
+    }
+
+    checkVideoAudio = () => {
+        if ($('#roomLoginAudio').is(':checked')) {
+            roomLoginAudio = "On";
+        }else{
+            roomLoginAudio = "Off";
+        }
+        if ($('#roomLoginVideo').is(':checked')) {
+            roomLoginVideo = "On";
+        }else{
+            roomLoginVideo = "Off";
+        }
+    }
+
+    function handleJoinRoom() {
+        let roomLoginURL = this.dataset.url;
+        let roomLoginPassword = document.getElementById("roomLoginPasswordField").value;
+
+        checkVideoAudio();
+
+        $.ajax({
+            url: '/:room/login',
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify({
+                roomLoginURL, 
+                roomLoginPassword,
+                roomLoginAudio,
+                roomLoginVideo
+            }),
+            success: (data) => {
+                let audioOnOff = data.audio;
+                let videoOnOff = data.video;
+                let redirectURL = data.redirect;
+
+                if(typeof data.redirect == 'string'){
+                    $.ajax({
+                        url: '/:room/videoAudio',
+                        type: 'POST',
+                        contentType: 'application/json',
+                        data: JSON.stringify({
+                            audioOnOff,
+                            videoOnOff
+                        }),
+                    });
+                    window.location = data.redirect;
+                }else{
+                    document.getElementById("roomLoginResult").innerHTML = 'Incorrect Password';
+                    document.getElementById("roomLoginPasswordField").value = null;
+                }
+            }
+        });
+    }
+
+    document.querySelectorAll('.room-login-btn').forEach(btn => {
+        btn.addEventListener('click', handleJoinRoom);
+    });
+    
+</script>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Login | Scorona</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/login.css"> 
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class="container">
+        <div class="scorona-div">
+            <div class="title-text">Scorona</div>
+            <p class="title-p">Helping teachers and students during the COVID-19 pandemic.</p>
+        </div>
+        <div class="login-div">
+            <div class="login-container">
+                <form id="loginForm" action="/login" method="post">
+                    <div class="login-container-div">
+                        <h1>Sign In</h1>
+                        <input type="text" id="loginUsernameField" placeholder="Enter Username" name="loginUsername" required>
+                        <input type="password" id="loginPasswordField" placeholder="Enter Password" name="loginPassword" required>
+                        <p>By logging in, you accept the <a href="/terms-and-conditions">Terms and Conditions</a></p>
+                        <p class="error-message" id="loginError"><%= message.error %></p>
+                        <button class="login-btn" id="loginBtn" type="submit"><span>Log In</span></button>
+                        <h3>or</h3>
+                        <button class="register-nav" id="registerNav" type="button" onclick="navigateToRegister()"><span>Create New Account</span></button>
+                        <button class="register-school-nav" id="registerSchoolNav" type="button" onclick="navigateToRegisterSchool()"><span>Register School</span></button>
+                    </div>
+                </form>
+            </div> 
+        </div>
+        <div id="cookies">
+            <p>This site uses cookies to function properly. By using this appication, you agree to the <a href="/terms-and-conditions">Terms and Conditions</a>.</p>
+            <p><a href="#" id="close-cookies">Accept Cookies</a></p>
+          </div>
+    </div>
+</body>
+<script>
+    $(document).ready(function(){
+    $("#cookies").addClass("display");
+    $("#close-cookies").click(function(){ 
+        event.preventDefault();
+        $("#cookies").addClass("close-cookies");
+    });
+    });
+    navigateToRegister = () => {
+        window.location = '/register';
+    }
+
+    navigateToRegisterSchool = () => {
+        window.location = '/school-registration';
+    }
+</script>
+</html>

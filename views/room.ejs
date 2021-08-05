@@ -1,0 +1,136 @@
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title><%= onlineLectureDetails.subject %> Call | Scorona</title>
+   <script>
+      const ROOM_ID = "<%= data.roomId %>"
+      const USERNAME = "<%= data.username %>"
+      const FULL_NAME = "<%= data.fullName %>"
+      const PROFILE_PIC = "<%= data.profilePic %>"
+      const AUDIO_ON_OFF = "<%= data.audioOnOff %>"
+      const VIDEO_ON_OFF = "<%= data.videoOnOff %>"
+      const IP_ADDRESS = "<%= data.ipAddress %>"
+   </script>
+   <script defer src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
+   <link rel="stylesheet" type="text/css" href="/assets/icons/css/all.css"> 
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <link rel="stylesheet" href="css/room.css">
+   <script src="https://kit.fontawesome.com/12bb37a688.js" crossorigin="anonymous"></script>
+   <script src="/socket.io/socket.io.js" defer></script>
+   <script src="room.js" defer></script>
+</head>
+<body>
+   <div class="container">
+      <div class="connection-popup" id="connectionPopUp">
+         If media does not load, Please refresh the page. This may be caused by poor connection.
+      </div>
+      <div id="videoGrid">
+      </div>
+      <div id="lectureInfoModal" class="lecture-info-modal">
+         <div class="lecture-info-modal-content">
+            <span class="close">&times;</span>
+            <h2>Lecture Details</h2>
+            <p><strong>Room ID:</strong> <%= data.roomId %></p>
+            <p><strong>Subject:</strong> <%= onlineLectureDetails.subject %></p>
+            <p><strong>School:</strong> <%= onlineLectureDetails.school %></p>
+            <p><strong>Location:</strong> <%= onlineLectureDetails.location %></p>
+            <p><strong>Teacher:</strong> <%= onlineLectureDetails.teacher_name %></p>
+            <p><strong>Teacher Email Address:</strong> <%= onlineLectureDetails.teacher_email %></p>
+            <p><strong>Date:</strong> <%= onlineLectureDetails.date %></p>
+            <p><strong>Start Time:</strong> <%= onlineLectureDetails.start_time %></p>
+            <p><strong>End Time:</strong> <%= onlineLectureDetails.end_time %></p>
+            <p><strong>Additional Notes:</strong> <%= onlineLectureDetails.additional_notes %></p>
+         </div>
+      </div>
+      <div class="chat-popup" id="chatPopUp">
+         <div class="chat-title-div">
+            <h3>Chat</h3>
+         </div>
+         <ul class="messages" id="messages"></ul>
+         <input id="chatMessageField" type="text" placeholder="Type a Message...">
+      </div>
+      <div class="time-elapsed-div">
+         <span class="time-elapsed-span" id="timeElapsedSpan"><%= onlineLectureDetails.subject %></span>
+      </div>
+      <div class="space-div-left" id="spaceDivLeft"></div>
+      <div class="chat-btn-div">
+         <div class="chat-text-popup-div" id="chatTextPopUpDiv" onclick="toggleChatPopUp()">
+            <i class="fas fa-comment-alt"></i>
+            <span id="chatText" class="chat-text">
+               Chat
+            </span>
+         </div>
+      </div>
+      <div class="record-btn-div">
+         <div class="record-text-popup-div" id="recordTextPopUpDiv">
+            <i class="fas fa-record-vinyl" id="recordStreamButton"></i>
+            <span id="recordText" class="record-text">
+               Start Recording
+            </span>
+         </div>
+      </div>  
+      <div class="copy-link-btn-div">
+         <div class="copy-link-text-popup-div" id="copyLinkTextPopUpDiv" onclick="copyLink()">
+            <i class="far fa-copy"></i>
+            <span id="copyLinkText" class="copy-link-text">
+               Copy Link
+            </span>
+         </div>
+      </div>  
+      <div class="share-screen-btn-div">
+         <div class="share-screen-text-popup-div" id="shareScreenTextPopUpDiv" onclick="toggleScreenSharing()">
+            <i class="fas fa-desktop"></i>
+            <span id="shareScreenText" class="share-screen-text">
+               Share Screen
+            </span>
+         </div>
+      </div>  
+      <div class="mute-unmute-btn-div">
+         <div class="mute-unmute-text-popup-div" id="muteUnmuteTextPopUpDiv" onclick="audioMuteUnmute()">
+            <i class="fas fa-microphone"></i>
+            <span id="muteUnmuteText" class="mute-unmute-text">
+               Mute
+            </span>
+         </div>
+      </div>
+      <div class="play-stop-btn-div">
+         <div class="play-stop-text-popup-div" id="playStopTextPopUpDiv" onclick="videoPlayStop()">
+            <i class="fas fa-video"></i>
+            <span id="playStopText" class="play-stop-text">
+               Stop Video
+            </span>
+         </div>
+      </div>
+      <div class="participants-btn-div">
+         <div class="participants-text-popup-div" id="participantsTextPopUpDiv" onclick="toggleParticipantsSidebar()">
+            <i class="fas fa-users"></i>
+            <span id="participantsText" class="participants-text">
+               Participants
+            </span>
+         </div>
+         <div class="participants-sidebar" id="participantsSidebar">
+            <span id="participants" class="participants">
+               Participants
+            </span>
+         </div>
+      </div>
+      <div class="lecture-info-btn-div">
+         <div class="lecture-info-text-popup-div" id="lectureInfoTextPopUpDiv">
+            <i class="fas fa-info-circle"></i>
+            <span id="lectureInfoText" class="lecture-info-text">
+               Lecture Details
+            </span>
+         </div>
+      </div>
+      <div class="space-div-right"></div>
+      <div class="end-call-btn-div">
+         <div class="circle-btn" onclick="leaveCall()">
+            <span>Leave</span>
+         <i class="fas fa-phone-slash fa-xs"></i>
+      </div>
+   </div>
+</body>
+</html>

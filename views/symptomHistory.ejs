@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Symptom History | Scorona</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css"> 
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar-div">
+            <%- include('partials/navbar') %>
+        </div>
+        <div class="symptom-history-div-container">
+            <h1>Symptom History</h1>
+            <!-- Symptom Form History Table -->
+            <% if(data.length){ %>
+            <table id="symptomFormHistoryTable">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Invited to Lesson</th>
+                        <th>Headache</th>
+                        <th>Dry cough</th>
+                        <th>Unusually tired</th>
+                        <th>Sore throat</th>
+                        <th>Fever</th>
+                        <th>Body aches</th>
+                        <th>Loss of taste/smell</th>
+                        <th>chest pain/pressure</th>
+                        <th>loss of speech/movement</th>
+                        <th>Diarrhea</th>
+                        <th>Skin rashes</th>
+                        <th>Discolouration</th>		
+                        <th>Difficulty breathing</th>
+                        <th>Conjunctivitis</th>
+                        <th>Conjestion/runny nose</th>
+                        <th>Nausea/vomiting</th>
+                        <th>Other symptoms</th>
+                        <th>Contact symptoms</th>
+                        <th>Contact 2 weeks</th>
+                        <th>Travelled 2 weeks</th>										
+                    </tr>
+                <thead>
+                <tbody id="symptomFormHistoryTableData">
+                    <% for(let i = 0; i < data.length; i++) { %>
+                        <tr>
+                            <td><%=data[i].date%></td>
+                            <td style="background-color: #e3e5f0;"><%=data[i].invited_to_classroom%></td>
+                            <td><%=data[i].headache%></td>
+                            <td style="background-color: #e3e5f0;"><%=data[i].unusually_tired%></td>
+                            <td><%=data[i].sore_throat%></td>
+                            <td style="background-color: #e3e5f0;"><%=data[i].fever%></td>
+                            <td><%=data[i].body_aches%></td>
+                            <td style="background-color: #e3e5f0;"><%=data[i].loss_taste_smell%></td>
+                            <td><%=data[i].chest_pain_pressure%></td>
+                            <td style="background-color: #e3e5f0;"><%=data[i].loss_speech_movement%></td>
+                            <td><%=data[i].diarrhea%></td>
+                            <td style="background-color: #e3e5f0;"><%=data[i].skin_rashes%></td>
+                            <td><%=data[i].discolouration%></td>
+                            <td style="background-color: #e3e5f0;"><%=data[i].difficulty_breathing%></td>
+                            <td><%=data[i].conjunctivitis%></td>
+                            <td style="background-color: #e3e5f0;"><%=data[i].conjestion_runny_nose%></td>
+                            <td><%=data[i].nausea_vomiting%></td>
+                            <td style="background-color: #e3e5f0;"><%=data[i].other_symptoms%></td>
+                            <td><%=data[i].contact_symptoms%></td>
+                            <td style="background-color: #e3e5f0;"><%=data[i].contact_2weeks%></td>
+                            <td><%=data[i].travelled_2weeks%></td>
+                            <td style="background-color: #e3e5f0;"><%=data[i].travelled_2weeks%></td>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+            <% }else{ %>
+                <p class='no-symptom-forms-filled'>
+                    No symptom forms filled
+                </p>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>

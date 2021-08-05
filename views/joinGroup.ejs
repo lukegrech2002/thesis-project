@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" href="/css/group.css" />
+		<title>Join Group | Scorona</title>
+	</head>
+	<body>
+		<div class="group-login-container">
+			<div class="navbar-div">
+				<%- include('partials/navbar') %>
+			</div>
+			<div class="join-group-div-container">
+				<h1>Join Group</h1>
+				<main class="join-main">
+					<form action="/join-group" method="POST">
+						<div class="join-group-div">
+							<input type="text" name="groupName" id="room" class="group-name-field" placeholder="Enter Group Name" required/>
+							<input type="password" name="groupPassword" id="groupPasswordField" class="group-password-field" placeholder="Enter Group Password" required/>
+							<p class="error-message"><%= message.error %></p>
+							<button type="submit" class="join-group-btn">Join Group</button>
+						</div>
+					</form>
+				</main>
+			</div>
+		</div>
+	</body>
+</html>

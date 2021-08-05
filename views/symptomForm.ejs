@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Symptom Form | Scorona</title>
+    <link rel="stylesheet" type="text/css" href="css/symptomForm.css"> 
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <form id="symptomForm" method="POST" action="/symptom-form/email">
+        <h1>Class Enrollment Form</h1>
+        <div class="symptom-form">
+        <p id="date"></p>
+        <h2>COVID-19 Symptoms</h2>
+        <p>Please complete this form to enroll in the selected class.</p>
+        <div class="radio-container-div-yesno">
+            <label class="radio-container-yesno">Yes</label>
+            <label class="radio-container-yesno">No</label><br>
+        </div>
+        <label for="symptom1">1. Headache</label>
+        <input type="radio" id="symptom1" name="symptom1" value="No" required>
+        <input type="radio" id="symptom1" name="symptom1" value="Yes"><br>
+        <hr>
+
+        <label for="symptom2">2. Dry cough</label>
+        <input type="radio" id="symptom2" name="symptom2" value="No" required>
+        <input type="radio" id="symptom2" name="symptom2" value="Yes"><br>
+        <hr>
+
+        <label for="symptom3">3. Unusually tired</label>
+        <input type="radio" id="symptom3" name="symptom3" value="No" required>
+        <input type="radio" id="symptom3" name="symptom3" value="Yes"><br>
+        <hr>
+
+        <label for="symptom4">4. Sore throat</label>
+        <input type="radio" id="symptom4" name="symptom4" value="No" required>
+        <input type="radio" id="symptom4" name="symptom4" value="Yes"><br>
+        <hr>
+
+        <label for="symptom5">5. Fever (greater than 100F / 37.8C)</label>
+        <input type="radio" id="symptom5" name="symptom5" value="No" required>
+        <input type="radio" id="symptom5" name="symptom5" value="Yes"><br>
+        <hr>
+
+        <label for="symptom6">6. Body aches</label>
+        <input type="radio" id="symptom6" name="symptom6" value="No" required>
+        <input type="radio" id="symptom6" name="symptom6" value="Yes"><br>
+        <hr>
+
+        <label for="symptom7">7. Loss of taste or smell</label>
+        <input type="radio" id="symptom7" name="symptom7" value="No" required>
+        <input type="radio" id="symptom7" name="symptom7" value="Yes"><br>
+        <hr>
+
+        <label for="symptom8">8. Chest pain or pressure</label>
+        <input type="radio" id="symptom8" name="symptom8" value="No" required>
+        <input type="radio" id="symptom8" name="symptom8" value="Yes"><br>
+        <hr>
+
+        <label for="symptom9">9. Loss of speech or movement</label>
+        <input type="radio" id="symptom9" name="symptom9" value="No" required>
+        <input type="radio" id="symptom9" name="symptom9" value="Yes"><br>
+        <hr>
+
+        <label for="symptom10">10. Diarrhea</label>
+        <input type="radio" id="symptom10" name="symptom10" value="No" required>
+        <input type="radio" id="symptom10" name="symptom10" value="Yes"><br>
+        <hr>
+
+        <label for="symptom11">11. Skin rashes</label>
+        <input type="radio" id="symptom11" name="symptom11" value="No" required>
+        <input type="radio" id="symptom11" name="symptom11" value="Yes"><br>
+        <hr>
+
+        <label for="symptom12">12. Discolouration of fingers or toes</label>
+        <input type="radio" id="symptom12" name="symptom12" value="No" required>
+        <input type="radio" id="symptom12" name="symptom12" value="Yes"><br>
+        <hr>
+
+        <label for="symptom13">13. Difficulty breathing or shortness of breath</label>
+        <input type="radio" id="symptom13" name="symptom13" value="No" required>
+        <input type="radio" id="symptom13" name="symptom13" value="Yes"><br>
+        <hr>
+
+        <label for="symptom14">14. Conjunctivitis</label>
+        <input type="radio" id="symptom14" name="symptom14" value="No" required>
+        <input type="radio" id="symptom14" name="symptom14" value="Yes"><br>
+        <hr>
+
+        <label for="symptom15">15. Conjestion or runny nose</label>
+        <input type="radio" id="symptom15" name="symptom15" value="No" required>
+        <input type="radio" id="symptom15" name="symptom15" value="Yes"><br>
+        <hr>
+
+        <label for="symptom16">16. Nausea or vomiting</label>
+        <input type="radio" id="symptom16" name="symptom16" value="No" required>
+        <input type="radio" id="symptom16" name="symptom16" value="Yes"><br>
+        <hr>
+
+        <label for="symptom17">17. Other sicknesses</label>
+        <input type="radio" id="symptom17" name="symptom17" value="No" required>
+        <input type="radio" id="symptom17" name="symptom17" value="Yes"><br>
+        <hr>
+
+        <h2>COVID-19 Exposure</h2>
+        <label for="covid-contact1">18. Have you been in close contact (6 feet) with anyone holding any of the symptoms above?</label>
+        <input type="radio" id="covid-contact1" name="contact1" value="No">
+        <input type="radio" id="covid-contact1" name="contact1" value="Yes"><br>
+        <hr>
+
+        <label for="covid-contact2">19. Have you been in contact with anyone that has tested positive for COVID-19 in the past 2 weeks?</label>
+        <input type="radio" id="covid-contact2" name="contact2" value="No">
+        <input type="radio" id="covid-contact2" name="contact2" value="Yes"><br>
+        <hr>
+
+        <label for="covid-contact3">20. Have you travelled abroad in the past 2 weeks?</label>
+        <input type="radio" id="covid-contact3" name="contact3" value="No">
+        <input type="radio" id="covid-contact3" name="contact3" value="Yes"><br>
+        <hr>
+        
+        <button class="submit-symptomform-btn" id="submitSymptomform-btn" type="submit" onclick="">Submit Form</button>
+        </div>
+    </form>
+    <footer>
+        COVID-19 symptoms and severity are determined from <a href="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"><b>cdc.gov</b></a> and<a href="https://patient.info/news-and-features/coronavirus-what-are-moderate-severe-and-critical-covid-19"><b> patient.info</b></a>
+    </footer>
+    <script>
+        let date = new Date();
+        let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        document.getElementById("date").innerHTML = date.getDate() + " " + months[date.getMonth()] + " " + date.getFullYear();
+    </script>
+</body>
+</html>

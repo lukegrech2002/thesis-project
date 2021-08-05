@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Help and Support | Scorona</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"> 
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar-div">
+            <%- include('partials/navbar') %>
+        </div>
+        <div class="help-and-support-div-container">
+            <h1>FAQ</h1>
+            <div class="help-and-support-div">
+                <h2>What is Scorona?</h2>
+                <p>Scorona is a web application that was developed with the aim to help students and teachers learn and teach safely in the current pandemic situation.</p>
+                <h2>Is Scorona safe?</h2>
+                <p>Scorona collects as little data as possible. All collected data is needed to make the web app user-friendly. User passwords are hashed with many salts, making password-cracking almost impossible.</p>
+                <h2>How do I change my password?</h2>
+                <p>A user may update their account details from the 'My Profile' page.</p>
+                <h2>I can not create a lecture</h2>
+                <p>Scorona works with permissions, only teachers can create lectures. Teachers and students may create groups.</p>
+                <h2>I do not want to continue using Scorona, how can I delete my account?</h2>
+                <p>A user may delete their account from the bottom of the 'My Profile' page. All user data is cleared from the database once the user is deleted.</p>
+                <h2>I left a room/group by mistake, do I have to re-enter the passwords?</h2>
+                <p>No, your last room/group login is stored in the session.</p>
+                <h2>Could strangers enter a room/group without invitation?</h2>
+                <p>All rooms and groups require passwords on entrance for security purposes.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

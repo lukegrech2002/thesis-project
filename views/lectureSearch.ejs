@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Lecture Search | Scorona</title>
+    <link rel="stylesheet" type="text/css" href="/css/joinLecture.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <h1>Search Results</h1>
+        <table id="lecturesTable">
+            <tbody id="lecturesTableData">
+                <% if(searchData.length){ %>
+                    <thead>
+                        <tr>
+                            <th>Result ID</th>
+                            <th>School</th>
+                            <th>Location</th>
+                            <th>Class</th>
+                            <th>Subject</th>
+                            <th>Teacher</th>
+                            <th>Date</th>
+                            <th>Start Time</th>
+                            <th>End Time</th>
+                            <th>Additional Notes</th>
+                            <th></th>							
+                        </tr>
+                    <thead>
+                    <% for(let i = 0; i < searchData.length; i++) { %>
+                        <tr>
+                            <td><%=searchData[i].id%></td>
+                            <td><%=searchData[i].school%></td>
+                            <td><%=searchData[i].location%></td>
+                            <td><%=searchData[i].class%></td>
+                            <td><%=searchData[i].subject%></td>
+                            <td><%=searchData[i].teacher_name%></td>
+                            <td><%=searchData[i].date%></td>
+                            <td><%=searchData[i].start_time%></td>
+                            <td><%=searchData[i].end_time%></td>
+                            <td><%=searchData[i].additional_notes%></td>
+                            <td><button class="join-btn" data-lesson="<%=JSON.stringify(searchData[i])%>" data-id="<%= searchData[i].id %>">Enrol in Class</button></td>
+                        </tr>
+                    <% } %>
+                <% }else{ %>
+                    <p class="no-lessons-found" id="noLessonsFound">No Lessons Found! <br>Searches are case sensitive<p>
+                <% } %>
+            </tbody>
+        </table>
+</body>
+<script>
+function handleJoin() {
+    let id = this.dataset.id;
+    let lesson = this.dataset.lesson;
+    $.ajax({
+        url: '/symptom-form',
+        type: 'POST',
+        contentType: 'application/json',
+        data: lesson,
+    });
+    $.ajax({
+        url: '/symptom-form/email',
+        type: 'POST',
+        contentType: 'application/json',
+        data: lesson,
+    });
+    location = "/symptom-form";
+}
+
+document.querySelectorAll('.join-btn').forEach(btn => {
+	btn.addEventListener('click', handleJoin);
+});
+</script>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/css/accountManagement.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <title>Account Management | Scorona</title>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar-div">
+            <%- include('partials/navbar') %>
+        </div>
+        <div class="account-management-div-container">
+            <h1>Account Management</h1>
+            <form action="/account-management" method="post" enctype="multipart/form-data" id="accountManagementForm">
+                <div class="account-management-container">          
+                    <div class="form-control">
+                        <input type="text" id="updateFirstNameField" placeholder="Enter New First Name" name="updateFirstName">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
+                    
+                    <div class="form-control">
+                        <input type="text" id="updateLastNameField" placeholder="Enter New Last Name" name="updateLastName">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
+                    
+                    <div class="form-control">
+                        <input type="text" id="updateUsernameField" placeholder="Enter New Username" name="updateUsername">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
+
+                    <div class="form-control">
+                        <input type="password" id="updatePasswordField" placeholder="Enter New Password" name="updatePassword">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
+                    
+                    <div class="form-control">
+                        <input type="password" id="updateConfirmPasswordField" placeholder="Confirm New Password" name="updateConfirmPassword">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
+
+                    <div class="pic-upload-container">
+                        <div class="input">
+                            <input type="file" id="updateProfilePictureField" name="updateProfilePicture" />
+                        </div>
+                    </div>
+
+                    <button class="account-management-btn" id="accountManagementBtn" type="submit">Confirm Changes</button>
+                </div>
+            </form>
+            <form action="/account-management/delete-account" method="post">
+                <button class="delete-account-btn" id="deleteAccount" type="submit">Delete Account</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    $(function(){
+        let container = $('.pic-upload-container');
+        let inputFile = $('#updateProfilePictureField');
+        let img;
+        let btn;
+        let txt = 'Update Profile Picture';
+        let txtAfter = 'Update Profile Picture';
+                
+        if(!container.find('#upload').length){
+            container.find('.input').append('<input type="button" value="'+txt+'" id="upload">');
+            btn = $('#upload');
+            container.prepend('<img src="" class="hidden" alt="Uploaded file" id="uploadImg" width="100">');
+            img = $('#uploadImg');
+        }
+                
+        btn.on('click', function(){
+            img.animate({opacity: 0}, 300);
+            inputFile.click();
+        });
+
+        inputFile.on('change', function(e){
+            container.find('label').html( inputFile.val() );
+            
+            var i = 0;
+            for(i; i < e.originalEvent.srcElement.files.length; i++) {
+                var file = e.originalEvent.srcElement.files[i], 
+                    reader = new FileReader();
+
+                reader.onloadend = function(){
+                    img.attr('src', reader.result).animate({opacity: 1}, 700);
+                }
+                reader.readAsDataURL(file);
+                img.removeClass('hidden');
+            }
+            
+            btn.val( txtAfter );
+        });
+    });
+
+    let form = document.getElementById('accountManagementForm');
+    let firstName = document.getElementById('updateFirstNameField');
+    let lastName = document.getElementById('updateLastNameField');
+    let username = document.getElementById('updateUsernameField');
+    let password = document.getElementById('updatePasswordField');
+    let password2 = document.getElementById('updateConfirmPasswordField');
+    
+    let firstNameValidCheck = false;
+    let lastNameValidCheck = false;
+    let usernameValidCheck = false;
+    let passwordValidCheck = false;
+    let confirmPasswordValidCheck = false;
+
+    let submitCount = 5;
+
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        checkInputs();
+        if ((firstNameValidCheck = true) && (lastNameValidCheck = true) 
+        && (usernameValidCheck = true) && (passwordValidCheck = true) 
+        && (confirmPasswordValidCheck = true)){
+            form.submit();
+        }
+    });
+
+    checkInputs = () => {
+        let firstNameValue = firstName.value.trim();
+        let lastNameValue = lastName.value.trim();
+        let usernameValue = username.value.trim();
+        let passwordValue = password.value.trim();
+        let password2Value = password2.value.trim();
+
+        if(firstNameValue === '') {
+            setErrorFor(firstName, 'Please enter your first name');
+            firstNameValidCheck = false;
+        }else if(Number.isInteger(+firstNameValue)){
+            setErrorFor(firstName, 'Last name can only contain letters');
+            firstNameValidCheck = false;
+        }else{
+            setSuccessFor(firstName);
+            firstNameValidCheck = true;
+        }
+
+        if(lastNameValue === '') {
+            setErrorFor(lastName, 'Please enter your last name');
+            lastNameValidCheck = false;
+        }else if(Number.isInteger(+lastNameValue)){
+            setErrorFor(lastName, 'Last name can only contain letters');
+            lastNameValidCheck = false;
+        }else{
+            setSuccessFor(lastName);
+            lastNameValidCheck = true;
+        }
+
+        if(usernameValue === '') {
+            setErrorFor(username, 'Please enter a username');
+            usernameValidCheck = false;
+        }else if(usernameValue.length < 5 || usernameValue.length > 20){
+            setErrorFor(username, 'Username must be between 5 and 20 characters');
+            usernameValidCheck = false;
+        }else{
+            sumbitCount = submitCount - 1;
+            setSuccessFor(username);
+            usernameValidCheck = true;
+        }
+        
+        if(passwordValue === '') {
+            setErrorFor(password, 'Please enter a password');
+            passwordValidCheck = false;
+        }else{
+            sumbitCount = submitCount - 1;
+            setSuccessFor(password);
+            passwordValidCheck = true;
+        }
+        
+        if(password2Value === '') {
+            setErrorFor(password2, 'Please confirm your password');
+            confirmPasswordValidCheck = false;
+        }else if(passwordValue !== password2Value) {
+            setErrorFor(password2, 'Passwords do not match');
+            confirmPasswordValidCheck = false;
+        }else{
+            sumbitCount = submitCount - 1;
+            setSuccessFor(password2);
+            confirmPasswordValidCheck = true;
+        }
+    }
+
+    setErrorFor = (input, message) => {
+        let formControl = input.parentElement;
+        let small = formControl.querySelector('small');
+        formControl.className = 'form-control error';
+        small.innerText = message;
+    }
+
+    setSuccessFor = (input) => {
+        let formControl = input.parentElement;
+        formControl.className = 'form-control success';
+    }
+</script>

@@ -1,0 +1,2532 @@
+{
+  "id": "17f984e8-a6c3-484f-965c-9e2578d34edc",
+  "version": "2.0",
+  "name": "video-conference-app",
+  "url": "https://localhost:3000/a4be4ce9-1f27-4a2a-bfb8-8be88067aa93",
+  "tests": [{
+    "id": "e9dd6de4-cc5c-4e58-a02c-58caf99926ea",
+    "name": "Incorrect Username Test",
+    "commands": [{
+      "id": "fbde91aa-c7f5-4b6c-ae39-62ffc9d4eaa3",
+      "comment": "",
+      "command": "open",
+      "target": "https://localhost:3000/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "257d5241-3965-4f75-a9d7-10455ce07412",
+      "comment": "",
+      "command": "click",
+      "target": "id=loginUsernameField",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2f89c013-825a-402b-9f26-331423cad63a",
+      "comment": "",
+      "command": "type",
+      "target": "id=loginUsernameField",
+      "targets": [],
+      "value": "testusername"
+    }, {
+      "id": "215b2ccb-fad3-4173-8cf8-b894bb3f5172",
+      "comment": "",
+      "command": "click",
+      "target": "id=loginPasswordField",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fa7169bc-362a-41b4-b9da-9cd6b0a31f5e",
+      "comment": "",
+      "command": "type",
+      "target": "id=loginPasswordField",
+      "targets": [],
+      "value": "testpassword"
+    }, {
+      "id": "7599b9cc-1813-40f2-9ad6-522cdbb8c42c",
+      "comment": "",
+      "command": "click",
+      "target": "id=loginBtn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a01ce0f4-b083-4def-b8f5-5b2a05044501",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=loginError",
+      "targets": [],
+      "value": "Incorrect Username"
+    }]
+  }, {
+    "id": "e3c9ccad-11dd-4b84-91c3-11d339b24d42",
+    "name": "Correct Username Incorrect Password",
+    "commands": [{
+      "id": "e0a3e39b-542c-4d0a-a148-11aef75eb559",
+      "comment": "",
+      "command": "open",
+      "target": "https://localhost:3000/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4889814e-7ae0-4060-a445-90156f8bf6c7",
+      "comment": "",
+      "command": "click",
+      "target": "id=loginUsernameField",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "91b39963-c2b9-4b31-b91a-21ae48cc9ff7",
+      "comment": "",
+      "command": "type",
+      "target": "id=loginUsernameField",
+      "targets": [],
+      "value": "LG640"
+    }, {
+      "id": "e5b1aad8-b60a-48d8-8fbc-485fd9d4bb76",
+      "comment": "",
+      "command": "click",
+      "target": "id=loginPasswordField",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "650a004f-35e4-47e7-a058-01560a1f13cb",
+      "comment": "",
+      "command": "type",
+      "target": "id=loginPasswordField",
+      "targets": [],
+      "value": "incorrectpassword"
+    }, {
+      "id": "64edea03-082f-4068-9134-3eb19ea88b83",
+      "comment": "",
+      "command": "click",
+      "target": "id=loginBtn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "23f72e10-3aff-457a-bce6-af9a7657b8e3",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=loginError",
+      "targets": [],
+      "value": "Incorrect Password"
+    }]
+  }, {
+    "id": "a61137e5-cdfd-4639-a878-70510d88ca96",
+    "name": "Correct Username and Password",
+    "commands": [{
+      "id": "7384c611-6696-44c8-a7aa-c055b895c1fe",
+      "comment": "",
+      "command": "open",
+      "target": "https://localhost:3000/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c160e357-aae4-43ee-b62d-e5e06f7c0fa1",
+      "comment": "",
+      "command": "click",
+      "target": "id=loginUsernameField",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bf637a8c-1675-4266-bc69-a338c1f5e772",
+      "comment": "",
+      "command": "type",
+      "target": "id=loginUsernameField",
+      "targets": [],
+      "value": "LG640"
+    }, {
+      "id": "4bd42623-6bb9-4471-ae68-cf6ad2d48710",
+      "comment": "",
+      "command": "click",
+      "target": "id=loginPasswordField",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e61827b3-0d5b-433d-9d08-8a0df9d9739f",
+      "comment": "",
+      "command": "type",
+      "target": "id=loginPasswordField",
+      "targets": [],
+      "value": "mypassword"
+    }, {
+      "id": "ff3689af-02f2-4a43-b8c6-9b2d7ecc4af4",
+      "comment": "",
+      "command": "click",
+      "target": "id=loginBtn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f3a9b90d-3c5d-43db-9a90-ade80936abde",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "id=loginError",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "1307b95b-87ee-4c09-b7f1-1fb8b7c2d51a",
+    "name": "Registering user with taken username",
+    "commands": [{
+      "id": "27ddda21-587c-4f26-8620-f6943674e015",
+      "comment": "",
+      "command": "open",
+      "target": "https://localhost:3000/register",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "66eed376-262e-4403-8174-f41837f62ac1",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerFirstNameField",
+      "targets": [
+        ["id=registerFirstNameField", "id"],
+        ["name=firstName", "name"],
+        ["css=#registerFirstNameField", "css:finder"],
+        ["xpath=//input[@id='registerFirstNameField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Luke"
+    }, {
+      "id": "d27f683f-5ada-446c-b4d8-6c56e0f910ba",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerLastNameField",
+      "targets": [
+        ["id=registerLastNameField", "id"],
+        ["name=lastName", "name"],
+        ["css=#registerLastNameField", "css:finder"],
+        ["xpath=//input[@id='registerLastNameField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Grech"
+    }, {
+      "id": "00dcbd8b-76cd-4abd-b168-49c8c7d3df99",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerUsernameField",
+      "targets": [
+        ["id=registerUsernameField", "id"],
+        ["name=username", "name"],
+        ["css=#registerUsernameField", "css:finder"],
+        ["xpath=//input[@id='registerUsernameField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "LG640"
+    }, {
+      "id": "079f6f15-e035-4718-b8c6-44c7449e08c1",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerEmailField",
+      "targets": [
+        ["id=registerEmailField", "id"],
+        ["name=email", "name"],
+        ["css=#registerEmailField", "css:finder"],
+        ["xpath=//input[@id='registerEmailField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "lg640@live.mdx.ac.uk"
+    }, {
+      "id": "40f348f1-f711-42ff-b1a8-79940a982c93",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(2) > label",
+      "targets": [
+        ["css=li:nth-child(2) > label", "css:finder"],
+        ["xpath=//form[@id='registerForm']/div/div[5]/ul/li[2]/label", "xpath:idRelative"],
+        ["xpath=//li[2]/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Student Account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5f0e969e-b03c-49a0-8f22-91e4118c5232",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerPasswordField",
+      "targets": [
+        ["id=registerPasswordField", "id"],
+        ["name=password", "name"],
+        ["css=#registerPasswordField", "css:finder"],
+        ["xpath=//input[@id='registerPasswordField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[6]/input", "xpath:idRelative"],
+        ["xpath=//div[6]/input", "xpath:position"]
+      ],
+      "value": "newpassword"
+    }, {
+      "id": "44da392b-fa5e-44dd-8ecc-56cb3c259739",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerConfirmPasswordField",
+      "targets": [
+        ["id=registerConfirmPasswordField", "id"],
+        ["name=confirmPassword", "name"],
+        ["css=#registerConfirmPasswordField", "css:finder"],
+        ["xpath=//input[@id='registerConfirmPasswordField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[7]/input", "xpath:idRelative"],
+        ["xpath=//div[7]/input", "xpath:position"]
+      ],
+      "value": "newpassword"
+    }, {
+      "id": "b791cce4-2409-4f76-91c6-ac6b942670ac",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerSchoolField",
+      "targets": [
+        ["id=registerSchoolField", "id"],
+        ["name=schoolName", "name"],
+        ["css=#registerSchoolField", "css:finder"],
+        ["xpath=//input[@id='registerSchoolField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[8]/input", "xpath:idRelative"],
+        ["xpath=//div[8]/input", "xpath:position"]
+      ],
+      "value": "Middlesex University"
+    }, {
+      "id": "305a40da-abc4-4aab-af01-f9c15e25b371",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerSchoolEnrollmentPasswordField",
+      "targets": [
+        ["id=registerSchoolEnrollmentPasswordField", "id"],
+        ["name=schoolEnrollmentPassword", "name"],
+        ["css=#registerSchoolEnrollmentPasswordField", "css:finder"],
+        ["xpath=//input[@id='registerSchoolEnrollmentPasswordField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[9]/input", "xpath:idRelative"],
+        ["xpath=//div[9]/input", "xpath:position"]
+      ],
+      "value": "mdxpw"
+    }, {
+      "id": "b70dc297-3028-4499-b343-c6f594dfb766",
+      "comment": "",
+      "command": "click",
+      "target": "id=upload",
+      "targets": [
+        ["id=upload", "id"],
+        ["css=#upload", "css:finder"],
+        ["xpath=//input[@id='upload']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[10]/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "142ecf4b-0833-43f3-9b66-65b0807b05ef",
+      "comment": "",
+      "command": "type",
+      "target": "id=profilePictureField",
+      "targets": [
+        ["id=profilePictureField", "id"],
+        ["name=profilePicture", "name"],
+        ["css=#profilePictureField", "css:finder"],
+        ["xpath=//input[@id='profilePictureField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[10]/div/input", "xpath:idRelative"],
+        ["xpath=//div[10]/div/input", "xpath:position"]
+      ],
+      "value": "C:\\profilepic.jpg"
+    }, {
+      "id": "375fa0db-9fd4-4480-a9b2-2ef48b44725e",
+      "comment": "",
+      "command": "click",
+      "target": "id=registerBtn",
+      "targets": [
+        ["id=registerBtn", "id"],
+        ["css=#registerBtn", "css:finder"],
+        ["xpath=//button[@id='registerBtn']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Register')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f89303c6-c9db-40e6-bab2-79a0e1b51bd6",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=registerError",
+      "targets": [],
+      "value": "Username Taken"
+    }]
+  }, {
+    "id": "c3d0899e-7a05-4a5d-b2f7-060ca1d87ef5",
+    "name": "Registering user with taken email",
+    "commands": [{
+      "id": "ea013c4a-5921-44bc-8e89-c7b02108ec19",
+      "comment": "",
+      "command": "open",
+      "target": "https://localhost:3000/register",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4332baf6-8f0a-44ca-9170-0ca88fd16e65",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerFirstNameField",
+      "targets": [
+        ["id=registerFirstNameField", "id"],
+        ["name=firstName", "name"],
+        ["css=#registerFirstNameField", "css:finder"],
+        ["xpath=//input[@id='registerFirstNameField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Luke"
+    }, {
+      "id": "d6cfe934-aa08-4450-bc8a-bb578267e59e",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerLastNameField",
+      "targets": [
+        ["id=registerLastNameField", "id"],
+        ["name=lastName", "name"],
+        ["css=#registerLastNameField", "css:finder"],
+        ["xpath=//input[@id='registerLastNameField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Grech"
+    }, {
+      "id": "a131d9a9-46ed-4346-a874-1b13483f3323",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerUsernameField",
+      "targets": [
+        ["id=registerUsernameField", "id"],
+        ["name=username", "name"],
+        ["css=#registerUsernameField", "css:finder"],
+        ["xpath=//input[@id='registerUsernameField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "lukegrech02"
+    }, {
+      "id": "c273e4bd-53ad-416a-a117-a6e30f290440",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerEmailField",
+      "targets": [
+        ["id=registerEmailField", "id"],
+        ["name=email", "name"],
+        ["css=#registerEmailField", "css:finder"],
+        ["xpath=//input[@id='registerEmailField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "lukegrech2002@gmail.com"
+    }, {
+      "id": "5571162f-0920-4fb4-a8f6-f15883afa6b1",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(2) > label",
+      "targets": [
+        ["css=li:nth-child(2) > label", "css:finder"],
+        ["xpath=//form[@id='registerForm']/div/div[5]/ul/li[2]/label", "xpath:idRelative"],
+        ["xpath=//li[2]/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Student Account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dbfb2e0e-fb02-4d9d-8c83-1a234348bcc1",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerPasswordField",
+      "targets": [
+        ["id=registerPasswordField", "id"],
+        ["name=password", "name"],
+        ["css=#registerPasswordField", "css:finder"],
+        ["xpath=//input[@id='registerPasswordField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[6]/input", "xpath:idRelative"],
+        ["xpath=//div[6]/input", "xpath:position"]
+      ],
+      "value": "newpassword"
+    }, {
+      "id": "10599c2f-8abe-4536-8191-f02df36a10aa",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerConfirmPasswordField",
+      "targets": [
+        ["id=registerConfirmPasswordField", "id"],
+        ["name=confirmPassword", "name"],
+        ["css=#registerConfirmPasswordField", "css:finder"],
+        ["xpath=//input[@id='registerConfirmPasswordField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[7]/input", "xpath:idRelative"],
+        ["xpath=//div[7]/input", "xpath:position"]
+      ],
+      "value": "newpassword"
+    }, {
+      "id": "293943a2-9b4e-4f14-bd93-835aa17e21c3",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerSchoolField",
+      "targets": [
+        ["id=registerSchoolField", "id"],
+        ["name=schoolName", "name"],
+        ["css=#registerSchoolField", "css:finder"],
+        ["xpath=//input[@id='registerSchoolField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[8]/input", "xpath:idRelative"],
+        ["xpath=//div[8]/input", "xpath:position"]
+      ],
+      "value": "Middlesex University"
+    }, {
+      "id": "5b4fb919-9fbd-472e-93e7-db9510d39d97",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerSchoolEnrollmentPasswordField",
+      "targets": [
+        ["id=registerSchoolEnrollmentPasswordField", "id"],
+        ["name=schoolEnrollmentPassword", "name"],
+        ["css=#registerSchoolEnrollmentPasswordField", "css:finder"],
+        ["xpath=//input[@id='registerSchoolEnrollmentPasswordField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[9]/input", "xpath:idRelative"],
+        ["xpath=//div[9]/input", "xpath:position"]
+      ],
+      "value": "mdxpw"
+    }, {
+      "id": "0a856414-5703-473f-870e-bff03d0b38ad",
+      "comment": "",
+      "command": "click",
+      "target": "id=upload",
+      "targets": [
+        ["id=upload", "id"],
+        ["css=#upload", "css:finder"],
+        ["xpath=//input[@id='upload']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[10]/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7cf6d3bf-5710-45a0-a402-74131ddd275f",
+      "comment": "",
+      "command": "type",
+      "target": "id=profilePictureField",
+      "targets": [
+        ["id=profilePictureField", "id"],
+        ["name=profilePicture", "name"],
+        ["css=#profilePictureField", "css:finder"],
+        ["xpath=//input[@id='profilePictureField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[10]/div/input", "xpath:idRelative"],
+        ["xpath=//div[10]/div/input", "xpath:position"]
+      ],
+      "value": "C:\\profilepic.jpg"
+    }, {
+      "id": "bfceb0a2-0f2c-4c1e-b9e1-4cbfc9af7e08",
+      "comment": "",
+      "command": "click",
+      "target": "id=registerBtn",
+      "targets": [
+        ["id=registerBtn", "id"],
+        ["css=#registerBtn", "css:finder"],
+        ["xpath=//button[@id='registerBtn']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Register')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "86e50593-7a24-4b24-bfce-cb246d197e7b",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=registerError",
+      "targets": [],
+      "value": "Email already has a registered account"
+    }]
+  }, {
+    "id": "4c488efd-4ac5-40a8-b454-7c9986cbc547",
+    "name": "Registering user with incorrect school enrolment details",
+    "commands": [{
+      "id": "7cf78154-14df-4332-b722-be3ac2a9ca78",
+      "comment": "",
+      "command": "open",
+      "target": "https://localhost:3000/register",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "739f80e7-6726-40bf-9d0c-8adad45499c9",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerFirstNameField",
+      "targets": [
+        ["id=registerFirstNameField", "id"],
+        ["name=firstName", "name"],
+        ["css=#registerFirstNameField", "css:finder"],
+        ["xpath=//input[@id='registerFirstNameField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Luke"
+    }, {
+      "id": "4f4866d5-4d8b-4e73-85f4-0de16b93d34c",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerLastNameField",
+      "targets": [
+        ["id=registerLastNameField", "id"],
+        ["name=lastName", "name"],
+        ["css=#registerLastNameField", "css:finder"],
+        ["xpath=//input[@id='registerLastNameField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Grech"
+    }, {
+      "id": "6e88acfb-9b0f-4bf4-96f7-a4f8c6a9a14b",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerUsernameField",
+      "targets": [
+        ["id=registerUsernameField", "id"],
+        ["name=username", "name"],
+        ["css=#registerUsernameField", "css:finder"],
+        ["xpath=//input[@id='registerUsernameField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "lukegrech02"
+    }, {
+      "id": "031a78a1-33f6-4790-89cf-20cde3508d6d",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerEmailField",
+      "targets": [
+        ["id=registerEmailField", "id"],
+        ["name=email", "name"],
+        ["css=#registerEmailField", "css:finder"],
+        ["xpath=//input[@id='registerEmailField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "lg640@gmail.com"
+    }, {
+      "id": "cd4d4516-ef9f-4379-9ba5-0d13a41eb201",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(2) > label",
+      "targets": [
+        ["css=li:nth-child(2) > label", "css:finder"],
+        ["xpath=//form[@id='registerForm']/div/div[5]/ul/li[2]/label", "xpath:idRelative"],
+        ["xpath=//li[2]/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Student Account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "97815df9-f5d9-4300-9c2f-81f09682e846",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerPasswordField",
+      "targets": [
+        ["id=registerPasswordField", "id"],
+        ["name=password", "name"],
+        ["css=#registerPasswordField", "css:finder"],
+        ["xpath=//input[@id='registerPasswordField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[6]/input", "xpath:idRelative"],
+        ["xpath=//div[6]/input", "xpath:position"]
+      ],
+      "value": "newpassword"
+    }, {
+      "id": "f5f36593-3016-4836-9d4f-92c42e42e9f6",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerConfirmPasswordField",
+      "targets": [
+        ["id=registerConfirmPasswordField", "id"],
+        ["name=confirmPassword", "name"],
+        ["css=#registerConfirmPasswordField", "css:finder"],
+        ["xpath=//input[@id='registerConfirmPasswordField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[7]/input", "xpath:idRelative"],
+        ["xpath=//div[7]/input", "xpath:position"]
+      ],
+      "value": "newpassword"
+    }, {
+      "id": "58f7869a-5549-4136-9ec0-3ae8dc0f1581",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerSchoolField",
+      "targets": [
+        ["id=registerSchoolField", "id"],
+        ["name=schoolName", "name"],
+        ["css=#registerSchoolField", "css:finder"],
+        ["xpath=//input[@id='registerSchoolField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[8]/input", "xpath:idRelative"],
+        ["xpath=//div[8]/input", "xpath:position"]
+      ],
+      "value": "Middlesex University"
+    }, {
+      "id": "a89c18c8-adc7-41d6-b776-3867ec3c212d",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerSchoolEnrollmentPasswordField",
+      "targets": [
+        ["id=registerSchoolEnrollmentPasswordField", "id"],
+        ["name=schoolEnrollmentPassword", "name"],
+        ["css=#registerSchoolEnrollmentPasswordField", "css:finder"],
+        ["xpath=//input[@id='registerSchoolEnrollmentPasswordField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[9]/input", "xpath:idRelative"],
+        ["xpath=//div[9]/input", "xpath:position"]
+      ],
+      "value": "incorrectPW"
+    }, {
+      "id": "df454536-9e3f-4e85-b0a8-e4eb8769923d",
+      "comment": "",
+      "command": "click",
+      "target": "id=upload",
+      "targets": [
+        ["id=upload", "id"],
+        ["css=#upload", "css:finder"],
+        ["xpath=//input[@id='upload']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[10]/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8c37efe3-7895-42ba-b32a-5c5192933aa6",
+      "comment": "",
+      "command": "type",
+      "target": "id=profilePictureField",
+      "targets": [
+        ["id=profilePictureField", "id"],
+        ["name=profilePicture", "name"],
+        ["css=#profilePictureField", "css:finder"],
+        ["xpath=//input[@id='profilePictureField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[10]/div/input", "xpath:idRelative"],
+        ["xpath=//div[10]/div/input", "xpath:position"]
+      ],
+      "value": "C:\\profilepic.jpg"
+    }, {
+      "id": "525ca2b9-c39d-41c1-879e-650ffe93904a",
+      "comment": "",
+      "command": "click",
+      "target": "id=registerBtn",
+      "targets": [
+        ["id=registerBtn", "id"],
+        ["css=#registerBtn", "css:finder"],
+        ["xpath=//button[@id='registerBtn']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Register')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e1e9eebd-a62b-4fac-ab5e-f33ad70cdbdf",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=registerError",
+      "targets": [],
+      "value": "Incorrect school enrolment details"
+    }]
+  }, {
+    "id": "c3753382-e414-424c-9122-c9bcfa172dc0",
+    "name": "Registering user with incorrect image type",
+    "commands": [{
+      "id": "20dba644-5ea8-4cbb-bc00-8e275577b81d",
+      "comment": "",
+      "command": "open",
+      "target": "https://localhost:3000/register",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2a01842d-48c1-4b00-aa5c-a370888f1a4d",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerFirstNameField",
+      "targets": [
+        ["id=registerFirstNameField", "id"],
+        ["name=firstName", "name"],
+        ["css=#registerFirstNameField", "css:finder"],
+        ["xpath=//input[@id='registerFirstNameField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Luke"
+    }, {
+      "id": "1f73cb23-beed-4576-a371-54c3eeb98d13",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerLastNameField",
+      "targets": [
+        ["id=registerLastNameField", "id"],
+        ["name=lastName", "name"],
+        ["css=#registerLastNameField", "css:finder"],
+        ["xpath=//input[@id='registerLastNameField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Grech"
+    }, {
+      "id": "a93e5c1c-324c-42a0-aaff-a601327104cb",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerUsernameField",
+      "targets": [
+        ["id=registerUsernameField", "id"],
+        ["name=username", "name"],
+        ["css=#registerUsernameField", "css:finder"],
+        ["xpath=//input[@id='registerUsernameField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "lukegrech02"
+    }, {
+      "id": "cc03f1a2-3ee4-428d-9f76-9554fae54181",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerEmailField",
+      "targets": [
+        ["id=registerEmailField", "id"],
+        ["name=email", "name"],
+        ["css=#registerEmailField", "css:finder"],
+        ["xpath=//input[@id='registerEmailField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "lg640@gmail.com"
+    }, {
+      "id": "7f87259c-7f9e-4c96-8349-0c77d2acf396",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(2) > label",
+      "targets": [
+        ["css=li:nth-child(2) > label", "css:finder"],
+        ["xpath=//form[@id='registerForm']/div/div[5]/ul/li[2]/label", "xpath:idRelative"],
+        ["xpath=//li[2]/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Student Account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bc38fb23-1b62-4d6a-acd7-5a5830e22096",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerPasswordField",
+      "targets": [
+        ["id=registerPasswordField", "id"],
+        ["name=password", "name"],
+        ["css=#registerPasswordField", "css:finder"],
+        ["xpath=//input[@id='registerPasswordField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[6]/input", "xpath:idRelative"],
+        ["xpath=//div[6]/input", "xpath:position"]
+      ],
+      "value": "newpassword"
+    }, {
+      "id": "18280b97-0d62-4336-b1d1-87b3723a5721",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerConfirmPasswordField",
+      "targets": [
+        ["id=registerConfirmPasswordField", "id"],
+        ["name=confirmPassword", "name"],
+        ["css=#registerConfirmPasswordField", "css:finder"],
+        ["xpath=//input[@id='registerConfirmPasswordField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[7]/input", "xpath:idRelative"],
+        ["xpath=//div[7]/input", "xpath:position"]
+      ],
+      "value": "newpassword"
+    }, {
+      "id": "e69aa918-521a-4d3a-a461-fe1289199c4c",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerSchoolField",
+      "targets": [
+        ["id=registerSchoolField", "id"],
+        ["name=schoolName", "name"],
+        ["css=#registerSchoolField", "css:finder"],
+        ["xpath=//input[@id='registerSchoolField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[8]/input", "xpath:idRelative"],
+        ["xpath=//div[8]/input", "xpath:position"]
+      ],
+      "value": "Middlesex University"
+    }, {
+      "id": "3987b1ff-5f64-4503-b3e6-666ee40a05ec",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerSchoolEnrollmentPasswordField",
+      "targets": [
+        ["id=registerSchoolEnrollmentPasswordField", "id"],
+        ["name=schoolEnrollmentPassword", "name"],
+        ["css=#registerSchoolEnrollmentPasswordField", "css:finder"],
+        ["xpath=//input[@id='registerSchoolEnrollmentPasswordField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[9]/input", "xpath:idRelative"],
+        ["xpath=//div[9]/input", "xpath:position"]
+      ],
+      "value": "mdxpw"
+    }, {
+      "id": "218c1939-c8a7-4f13-8a7c-e87aae748258",
+      "comment": "",
+      "command": "click",
+      "target": "id=upload",
+      "targets": [
+        ["id=upload", "id"],
+        ["css=#upload", "css:finder"],
+        ["xpath=//input[@id='upload']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[10]/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b6fca722-efa4-41d9-9e33-16ff1cfa04da",
+      "comment": "",
+      "command": "type",
+      "target": "id=profilePictureField",
+      "targets": [
+        ["id=profilePictureField", "id"],
+        ["name=profilePicture", "name"],
+        ["css=#profilePictureField", "css:finder"],
+        ["xpath=//input[@id='profilePictureField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[10]/div/input", "xpath:idRelative"],
+        ["xpath=//div[10]/div/input", "xpath:position"]
+      ],
+      "value": "C:\\sound.mp3"
+    }, {
+      "id": "2d3211d0-9984-4497-8a31-c3bb48b0d0bf",
+      "comment": "",
+      "command": "click",
+      "target": "id=registerBtn",
+      "targets": [
+        ["id=registerBtn", "id"],
+        ["css=#registerBtn", "css:finder"],
+        ["xpath=//button[@id='registerBtn']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Register')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "704b5d9a-fb65-4266-900c-37d92a642b31",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=registerError",
+      "targets": [],
+      "value": "This format is not allowed, please upload a profile picture of image type '.png', '.jpeg' or'.jpg"
+    }]
+  }, {
+    "id": "eb3739c8-19df-424f-a03c-9cab69f7c01d",
+    "name": "Registering user without profile image",
+    "commands": [{
+      "id": "92aa5839-65bf-4160-96fb-503b7c6c5f8b",
+      "comment": "",
+      "command": "open",
+      "target": "https://localhost:3000/register",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4f403e34-7f34-45a8-ba0a-e536389f6022",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerFirstNameField",
+      "targets": [
+        ["id=registerFirstNameField", "id"],
+        ["name=firstName", "name"],
+        ["css=#registerFirstNameField", "css:finder"],
+        ["xpath=//input[@id='registerFirstNameField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Luke"
+    }, {
+      "id": "e00ce8ef-e2ee-49e3-8bdf-5c1694e58a78",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerLastNameField",
+      "targets": [
+        ["id=registerLastNameField", "id"],
+        ["name=lastName", "name"],
+        ["css=#registerLastNameField", "css:finder"],
+        ["xpath=//input[@id='registerLastNameField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Grech"
+    }, {
+      "id": "bdaa96ed-b7b9-4a41-9c00-83f74f076fde",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerUsernameField",
+      "targets": [
+        ["id=registerUsernameField", "id"],
+        ["name=username", "name"],
+        ["css=#registerUsernameField", "css:finder"],
+        ["xpath=//input[@id='registerUsernameField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "lukegrech02"
+    }, {
+      "id": "38f409dd-bc80-47c4-9896-7a66ea23841b",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerEmailField",
+      "targets": [
+        ["id=registerEmailField", "id"],
+        ["name=email", "name"],
+        ["css=#registerEmailField", "css:finder"],
+        ["xpath=//input[@id='registerEmailField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "lg640@gmail.com"
+    }, {
+      "id": "a87d2be4-cf45-47d4-83c0-e52d1f102d54",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(2) > label",
+      "targets": [
+        ["css=li:nth-child(2) > label", "css:finder"],
+        ["xpath=//form[@id='registerForm']/div/div[5]/ul/li[2]/label", "xpath:idRelative"],
+        ["xpath=//li[2]/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Student Account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3a8b1961-e652-44b9-a838-eb5ef6af395c",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerPasswordField",
+      "targets": [
+        ["id=registerPasswordField", "id"],
+        ["name=password", "name"],
+        ["css=#registerPasswordField", "css:finder"],
+        ["xpath=//input[@id='registerPasswordField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[6]/input", "xpath:idRelative"],
+        ["xpath=//div[6]/input", "xpath:position"]
+      ],
+      "value": "newpassword"
+    }, {
+      "id": "2afbe945-2bc5-49c4-bc29-10a7d9d9bf6d",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerConfirmPasswordField",
+      "targets": [
+        ["id=registerConfirmPasswordField", "id"],
+        ["name=confirmPassword", "name"],
+        ["css=#registerConfirmPasswordField", "css:finder"],
+        ["xpath=//input[@id='registerConfirmPasswordField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[7]/input", "xpath:idRelative"],
+        ["xpath=//div[7]/input", "xpath:position"]
+      ],
+      "value": "newpassword"
+    }, {
+      "id": "65088caf-0a84-4f87-98b1-7e7920bbf3b8",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerSchoolField",
+      "targets": [
+        ["id=registerSchoolField", "id"],
+        ["name=schoolName", "name"],
+        ["css=#registerSchoolField", "css:finder"],
+        ["xpath=//input[@id='registerSchoolField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[8]/input", "xpath:idRelative"],
+        ["xpath=//div[8]/input", "xpath:position"]
+      ],
+      "value": "Middlesex University"
+    }, {
+      "id": "4d575ca6-c223-425c-a62b-1f2daf9bfecc",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerSchoolEnrollmentPasswordField",
+      "targets": [
+        ["id=registerSchoolEnrollmentPasswordField", "id"],
+        ["name=schoolEnrollmentPassword", "name"],
+        ["css=#registerSchoolEnrollmentPasswordField", "css:finder"],
+        ["xpath=//input[@id='registerSchoolEnrollmentPasswordField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[9]/input", "xpath:idRelative"],
+        ["xpath=//div[9]/input", "xpath:position"]
+      ],
+      "value": "mdxpw"
+    }, {
+      "id": "a7d0af32-f54c-4a0e-9ff9-cbbb99b01c19",
+      "comment": "",
+      "command": "click",
+      "target": "id=upload",
+      "targets": [
+        ["id=upload", "id"],
+        ["css=#upload", "css:finder"],
+        ["xpath=//input[@id='upload']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[10]/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fd32977e-7299-48a1-952b-5e5fb9570384",
+      "comment": "",
+      "command": "click",
+      "target": "id=registerBtn",
+      "targets": [
+        ["id=registerBtn", "id"],
+        ["css=#registerBtn", "css:finder"],
+        ["xpath=//button[@id='registerBtn']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Register')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "640143a5-9070-4662-8c1d-a0c524545ea8",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=registerError",
+      "targets": [],
+      "value": "Please upload a profile picture"
+    }]
+  }, {
+    "id": "b839d7a9-0492-4eca-b7b3-267cd9a05aca",
+    "name": "Successful registration",
+    "commands": [{
+      "id": "a6b97701-427e-4474-9a94-951b024dfe39",
+      "comment": "",
+      "command": "open",
+      "target": "https://localhost:3000/register",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "52ec36d5-21d2-44df-a012-818010225d5f",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerFirstNameField",
+      "targets": [
+        ["id=registerFirstNameField", "id"],
+        ["name=firstName", "name"],
+        ["css=#registerFirstNameField", "css:finder"],
+        ["xpath=//input[@id='registerFirstNameField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Luke"
+    }, {
+      "id": "e5fb05aa-f15d-44cd-ad47-9ce5a97e5663",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerLastNameField",
+      "targets": [
+        ["id=registerLastNameField", "id"],
+        ["name=lastName", "name"],
+        ["css=#registerLastNameField", "css:finder"],
+        ["xpath=//input[@id='registerLastNameField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Grech"
+    }, {
+      "id": "08c19f01-d414-4980-90f2-a2066ccab7a3",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerUsernameField",
+      "targets": [
+        ["id=registerUsernameField", "id"],
+        ["name=username", "name"],
+        ["css=#registerUsernameField", "css:finder"],
+        ["xpath=//input[@id='registerUsernameField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "lukegrech02"
+    }, {
+      "id": "ec7ab775-08d1-4089-8839-19e5eb281208",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerEmailField",
+      "targets": [
+        ["id=registerEmailField", "id"],
+        ["name=email", "name"],
+        ["css=#registerEmailField", "css:finder"],
+        ["xpath=//input[@id='registerEmailField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "lg640@live.mdx.ac.uk"
+    }, {
+      "id": "1107d68a-b701-4e79-bad3-7784154977bc",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(2) > label",
+      "targets": [
+        ["css=li:nth-child(2) > label", "css:finder"],
+        ["xpath=//form[@id='registerForm']/div/div[5]/ul/li[2]/label", "xpath:idRelative"],
+        ["xpath=//li[2]/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Student Account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ec8a64d3-8226-40af-83dd-e1ebc579f569",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerPasswordField",
+      "targets": [
+        ["id=registerPasswordField", "id"],
+        ["name=password", "name"],
+        ["css=#registerPasswordField", "css:finder"],
+        ["xpath=//input[@id='registerPasswordField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[6]/input", "xpath:idRelative"],
+        ["xpath=//div[6]/input", "xpath:position"]
+      ],
+      "value": "newpassword"
+    }, {
+      "id": "a055d084-218c-40c4-8526-2cb87055a81a",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerConfirmPasswordField",
+      "targets": [
+        ["id=registerConfirmPasswordField", "id"],
+        ["name=confirmPassword", "name"],
+        ["css=#registerConfirmPasswordField", "css:finder"],
+        ["xpath=//input[@id='registerConfirmPasswordField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[7]/input", "xpath:idRelative"],
+        ["xpath=//div[7]/input", "xpath:position"]
+      ],
+      "value": "newpassword"
+    }, {
+      "id": "b0dd7f9a-863c-46b6-9904-d049fe512d4d",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerSchoolField",
+      "targets": [
+        ["id=registerSchoolField", "id"],
+        ["name=schoolName", "name"],
+        ["css=#registerSchoolField", "css:finder"],
+        ["xpath=//input[@id='registerSchoolField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[8]/input", "xpath:idRelative"],
+        ["xpath=//div[8]/input", "xpath:position"]
+      ],
+      "value": "Middlesex University"
+    }, {
+      "id": "6ed88525-de94-4f2b-bf57-7b9d235225ed",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerSchoolEnrollmentPasswordField",
+      "targets": [
+        ["id=registerSchoolEnrollmentPasswordField", "id"],
+        ["name=schoolEnrollmentPassword", "name"],
+        ["css=#registerSchoolEnrollmentPasswordField", "css:finder"],
+        ["xpath=//input[@id='registerSchoolEnrollmentPasswordField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[9]/input", "xpath:idRelative"],
+        ["xpath=//div[9]/input", "xpath:position"]
+      ],
+      "value": "mdxpw"
+    }, {
+      "id": "814560be-617e-4a60-9b96-8450b7799111",
+      "comment": "",
+      "command": "click",
+      "target": "id=upload",
+      "targets": [
+        ["id=upload", "id"],
+        ["css=#upload", "css:finder"],
+        ["xpath=//input[@id='upload']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[10]/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0a64d5c6-fe0a-43f1-9ef8-1f7cb1ad7afa",
+      "comment": "",
+      "command": "type",
+      "target": "id=profilePictureField",
+      "targets": [
+        ["id=profilePictureField", "id"],
+        ["name=profilePicture", "name"],
+        ["css=#profilePictureField", "css:finder"],
+        ["xpath=//input[@id='profilePictureField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/div[10]/div/input", "xpath:idRelative"],
+        ["xpath=//div[10]/div/input", "xpath:position"]
+      ],
+      "value": "C:\\profilepic.jpg"
+    }, {
+      "id": "42179d05-1267-4f16-9872-4cd0efd0e219",
+      "comment": "",
+      "command": "click",
+      "target": "id=registerBtn",
+      "targets": [
+        ["id=registerBtn", "id"],
+        ["css=#registerBtn", "css:finder"],
+        ["xpath=//button[@id='registerBtn']", "xpath:attributes"],
+        ["xpath=//form[@id='registerForm']/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Register')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "34ed0243-3164-4e95-8bf9-d5e912983deb",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "id=registerError",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "91d99a78-e592-495a-8cfd-610115cd7161",
+    "name": "School registration",
+    "commands": [{
+      "id": "0407e5ee-ffe8-42ac-aa10-b76460e5fb1d",
+      "comment": "",
+      "command": "open",
+      "target": "https://localhost:3000/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "479a67a9-ed25-4113-9ee5-d12723a05f48",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x708",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4ea20b8b-86d0-4b11-99f4-277b996add64",
+      "comment": "",
+      "command": "click",
+      "target": "id=registerSchoolNav",
+      "targets": [
+        ["id=registerSchoolNav", "id"],
+        ["css=#registerSchoolNav", "css:finder"],
+        ["xpath=//button[@id='registerSchoolNav']", "xpath:attributes"],
+        ["xpath=//form[@id='loginForm']/button[3]", "xpath:idRelative"],
+        ["xpath=//button[3]", "xpath:position"],
+        ["xpath=//button[contains(.,'Register School')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6d852410-3124-47eb-8ac7-09a4d78bae4c",
+      "comment": "",
+      "command": "click",
+      "target": "id=registerSchoolNameField",
+      "targets": [
+        ["id=registerSchoolNameField", "id"],
+        ["name=schoolName", "name"],
+        ["css=#registerSchoolNameField", "css:finder"],
+        ["xpath=//input[@id='registerSchoolNameField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerSchoolForm']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "04364cf8-2b7f-4a31-9c08-1d7f18d8acc3",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerSchoolNameField",
+      "targets": [
+        ["id=registerSchoolNameField", "id"],
+        ["name=schoolName", "name"],
+        ["css=#registerSchoolNameField", "css:finder"],
+        ["xpath=//input[@id='registerSchoolNameField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerSchoolForm']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "University of London"
+    }, {
+      "id": "797d5652-58db-45c7-8619-1253cd70d11c",
+      "comment": "",
+      "command": "click",
+      "target": "id=registerSchoolPasswordField",
+      "targets": [
+        ["id=registerSchoolPasswordField", "id"],
+        ["name=schoolEnrollmentPassword", "name"],
+        ["css=#registerSchoolPasswordField", "css:finder"],
+        ["xpath=//input[@id='registerSchoolPasswordField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerSchoolForm']/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c24e9d82-7cf7-4372-b22a-6245a2fbbbb6",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerSchoolPasswordField",
+      "targets": [
+        ["id=registerSchoolPasswordField", "id"],
+        ["name=schoolEnrollmentPassword", "name"],
+        ["css=#registerSchoolPasswordField", "css:finder"],
+        ["xpath=//input[@id='registerSchoolPasswordField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerSchoolForm']/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/input", "xpath:position"]
+      ],
+      "value": "uniOfLdn"
+    }, {
+      "id": "51de4b69-5624-45e3-9273-c987b9bf5413",
+      "comment": "",
+      "command": "click",
+      "target": "id=registerSchoolConfirmPasswordField",
+      "targets": [
+        ["id=registerSchoolConfirmPasswordField", "id"],
+        ["name=school_enrollment_confirmPassword", "name"],
+        ["css=#registerSchoolConfirmPasswordField", "css:finder"],
+        ["xpath=//input[@id='registerSchoolConfirmPasswordField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerSchoolForm']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "68aaabce-a921-4931-97b0-63bf7d1ca623",
+      "comment": "",
+      "command": "type",
+      "target": "id=registerSchoolConfirmPasswordField",
+      "targets": [
+        ["id=registerSchoolConfirmPasswordField", "id"],
+        ["name=school_enrollment_confirmPassword", "name"],
+        ["css=#registerSchoolConfirmPasswordField", "css:finder"],
+        ["xpath=//input[@id='registerSchoolConfirmPasswordField']", "xpath:attributes"],
+        ["xpath=//form[@id='registerSchoolForm']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "uniOfLdn"
+    }, {
+      "id": "6550886b-f097-4982-bd76-53f2c8347a33",
+      "comment": "",
+      "command": "click",
+      "target": "id=registerBtn",
+      "targets": [
+        ["id=registerBtn", "id"],
+        ["css=#registerBtn", "css:finder"],
+        ["xpath=//button[@id='registerBtn']", "xpath:attributes"],
+        ["xpath=//form[@id='registerSchoolForm']/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Register School')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3703c664-17e5-473a-b9c2-5672a6af6942",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "id=registerSchoolError",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "027cc1be-7821-444b-94a9-cf68259c1487",
+    "name": "lecture search",
+    "commands": [{
+      "id": "0ce4ed5f-fd63-4add-b115-7614730072a5",
+      "comment": "",
+      "command": "open",
+      "target": "https://localhost:3000/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "273bf155-7fb2-46cf-840f-4da5f1170d98",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Lecture Enrollment",
+      "targets": [
+        ["linkText=Lecture Enrollment", "linkText"],
+        ["css=li:nth-child(4) > .s-sidebar__nav-link", "css:finder"],
+        ["xpath=//a[contains(@href, '/join-lecture')]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Lecture Enrollment')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9f13b07b-679f-4ca9-8968-4e38e2e4dd1d",
+      "comment": "",
+      "command": "type",
+      "target": "id=findLectureSubject",
+      "targets": [
+        ["id=findLectureSubject", "id"],
+        ["name=findLectureSubject", "name"],
+        ["css=#findLectureSubject", "css:finder"],
+        ["xpath=//input[@id='findLectureSubject']", "xpath:attributes"],
+        ["xpath=//form[@id='lectureSearchForm']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "ICT"
+    }, {
+      "id": "e47825d8-9d1e-423f-a988-c835dc473c10",
+      "comment": "",
+      "command": "click",
+      "target": "id=findLectureBtn",
+      "targets": [
+        ["id=findLectureBtn", "id"],
+        ["css=#findLectureBtn", "css:finder"],
+        ["xpath=//button[@id='findLectureBtn']", "xpath:attributes"],
+        ["xpath=//form[@id='lectureSearchForm']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "537396f4-aea1-4bc9-aa6d-2476fd6a0913",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=noLessonsFound",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "e7148cc4-bf8c-4688-ae22-d152971ade31",
+    "name": "lecture enrolment",
+    "commands": [{
+      "id": "17974a98-b7b4-4682-b135-fe8f9a8cb082",
+      "comment": "",
+      "command": "open",
+      "target": "https://localhost:3000/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "03a39278-2bad-4500-a3cc-cabe86bb9e22",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x744",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b00d162a-95f8-4d95-93db-1dfc7c4d6f0c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Lecture Enrollment",
+      "targets": [
+        ["linkText=Lecture Enrollment", "linkText"],
+        ["css=li:nth-child(4) > .s-sidebar__nav-link", "css:finder"],
+        ["xpath=//a[contains(@href, '/join-lecture')]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Lecture Enrollment')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "02c467fd-b0c6-4526-a540-8ceedd1225fd",
+      "comment": "",
+      "command": "click",
+      "target": "id=findLectureSubject",
+      "targets": [
+        ["id=findLectureSubject", "id"],
+        ["name=findLectureSubject", "name"],
+        ["css=#findLectureSubject", "css:finder"],
+        ["xpath=//input[@id='findLectureSubject']", "xpath:attributes"],
+        ["xpath=//form[@id='lectureSearchForm']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f1e4190c-f10b-4fdc-8c72-7c83586f8426",
+      "comment": "",
+      "command": "type",
+      "target": "id=findLectureSubject",
+      "targets": [
+        ["id=findLectureSubject", "id"],
+        ["name=findLectureSubject", "name"],
+        ["css=#findLectureSubject", "css:finder"],
+        ["xpath=//input[@id='findLectureSubject']", "xpath:attributes"],
+        ["xpath=//form[@id='lectureSearchForm']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "ICT"
+    }, {
+      "id": "aeb6885e-1306-4aea-bb24-b73c0ae40c38",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fa-search",
+      "targets": [
+        ["css=.fa-search", "css:finder"],
+        ["xpath=//button[@id='findLectureBtn']/i", "xpath:idRelative"],
+        ["xpath=//button/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d2c141d2-cc33-427c-91b7-a311407c64ea",
+      "comment": "",
+      "command": "click",
+      "target": "css=.join-btn",
+      "targets": [
+        ["css=.join-btn", "css:finder"],
+        ["xpath=//table[@id='lecturesTable']/thead[2]/tr/td[11]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Enroll in Class')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "05c76423-28e7-4528-9777-d7b3ed893015",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.symptom-form",
+      "targets": [
+        ["css=.symptom-form", "css:finder"],
+        ["xpath=//form[@id='symptomForm']/div", "xpath:idRelative"],
+        ["xpath=//form/div", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "e6068a04-1bf5-407a-954e-283cfb6fbe2c",
+    "name": "Confirmation email",
+    "commands": [{
+      "id": "4d3cda33-de21-4674-8a24-6ebb7384e77f",
+      "comment": "",
+      "command": "open",
+      "target": "https://localhost:3000/join-lecture",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1efa6d57-fba6-43e1-8f01-915a2abffacb",
+      "comment": "",
+      "command": "type",
+      "target": "id=findLectureSubject",
+      "targets": [
+        ["id=findLectureSubject", "id"],
+        ["name=findLectureSubject", "name"],
+        ["css=#findLectureSubject", "css:finder"],
+        ["xpath=//input[@id='findLectureSubject']", "xpath:attributes"],
+        ["xpath=//form[@id='lectureSearchForm']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "ICT"
+    }, {
+      "id": "dd73a58a-3bcc-42f5-8d7b-fd9cd43fdb40",
+      "comment": "",
+      "command": "click",
+      "target": "id=findLectureBtn",
+      "targets": [
+        ["id=findLectureBtn", "id"],
+        ["css=#findLectureBtn", "css:finder"],
+        ["xpath=//button[@id='findLectureBtn']", "xpath:attributes"],
+        ["xpath=//form[@id='lectureSearchForm']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fd7fc704-4edc-4042-9d6d-81a4b34701f5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.join-btn",
+      "targets": [
+        ["css=.join-btn", "css:finder"],
+        ["xpath=//table[@id='lecturesTable']/thead[2]/tr/td[11]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Enroll in Class')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a2990d16-8605-4fd3-a745-f373d41c40ef",
+      "comment": "",
+      "command": "click",
+      "target": "css=.symptom-form",
+      "targets": [
+        ["css=.symptom-form", "css:finder"],
+        ["xpath=//form[@id='symptomForm']/div", "xpath:idRelative"],
+        ["xpath=//div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6441688e-f92c-4540-8e44-aa284bff1967",
+      "comment": "",
+      "command": "click",
+      "target": "id=symptom1",
+      "targets": [
+        ["id=symptom1", "id"],
+        ["name=symptom1", "name"],
+        ["xpath=//input[@id='symptom1']", "xpath:attributes"],
+        ["xpath=//form[@id='symptomForm']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "99ee7284-9789-46a6-bce6-a895592bd4c2",
+      "comment": "",
+      "command": "doubleClick",
+      "target": "id=symptom1",
+      "targets": [
+        ["id=symptom1", "id"],
+        ["name=symptom1", "name"],
+        ["xpath=//input[@id='symptom1']", "xpath:attributes"],
+        ["xpath=//form[@id='symptomForm']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7c071d2a-2af1-478e-8dfc-a9c0416d7bbe",
+      "comment": "",
+      "command": "click",
+      "target": "id=symptom2",
+      "targets": [
+        ["id=symptom2", "id"],
+        ["name=symptom2", "name"],
+        ["xpath=//input[@id='symptom2']", "xpath:attributes"],
+        ["xpath=//form[@id='symptomForm']/div/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3704a759-79f8-4115-8fe3-d3a51a5992f5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.symptom-form",
+      "targets": [
+        ["css=.symptom-form", "css:finder"],
+        ["xpath=//form[@id='symptomForm']/div", "xpath:idRelative"],
+        ["xpath=//div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "169d4a95-9588-4f02-81e6-bf0cd93ffe68",
+      "comment": "",
+      "command": "click",
+      "target": "id=symptom3",
+      "targets": [
+        ["id=symptom3", "id"],
+        ["name=symptom3", "name"],
+        ["xpath=//input[@id='symptom3']", "xpath:attributes"],
+        ["xpath=//form[@id='symptomForm']/div/input[5]", "xpath:idRelative"],
+        ["xpath=//input[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1d855a8b-12c4-4788-b5ba-d58f0bfdd6ed",
+      "comment": "",
+      "command": "click",
+      "target": "css=.symptom-form",
+      "targets": [
+        ["css=.symptom-form", "css:finder"],
+        ["xpath=//form[@id='symptomForm']/div", "xpath:idRelative"],
+        ["xpath=//div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e3638d98-3555-4333-bdfb-4e6302edf2a8",
+      "comment": "",
+      "command": "click",
+      "target": "id=symptom4",
+      "targets": [
+        ["id=symptom4", "id"],
+        ["name=symptom4", "name"],
+        ["xpath=//input[@id='symptom4']", "xpath:attributes"],
+        ["xpath=//form[@id='symptomForm']/div/input[7]", "xpath:idRelative"],
+        ["xpath=//input[7]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2d4377d8-1265-4599-bb9d-9970b4fb13cf",
+      "comment": "",
+      "command": "click",
+      "target": "id=symptom5",
+      "targets": [
+        ["id=symptom5", "id"],
+        ["name=symptom5", "name"],
+        ["xpath=//input[@id='symptom5']", "xpath:attributes"],
+        ["xpath=//form[@id='symptomForm']/div/input[9]", "xpath:idRelative"],
+        ["xpath=//input[9]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c774ace0-3ce4-4a64-801f-604b3d5693a6",
+      "comment": "",
+      "command": "click",
+      "target": "id=symptom6",
+      "targets": [
+        ["id=symptom6", "id"],
+        ["name=symptom6", "name"],
+        ["xpath=//input[@id='symptom6']", "xpath:attributes"],
+        ["xpath=//form[@id='symptomForm']/div/input[11]", "xpath:idRelative"],
+        ["xpath=//input[11]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8835ddce-8d6c-4520-897e-51aeda1e01e0",
+      "comment": "",
+      "command": "click",
+      "target": "id=symptom7",
+      "targets": [
+        ["id=symptom7", "id"],
+        ["name=symptom7", "name"],
+        ["xpath=//input[@id='symptom7']", "xpath:attributes"],
+        ["xpath=//form[@id='symptomForm']/div/input[13]", "xpath:idRelative"],
+        ["xpath=//input[13]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a0dd49a1-6b62-4e15-bf42-da37391e6047",
+      "comment": "",
+      "command": "click",
+      "target": "id=symptom8",
+      "targets": [
+        ["id=symptom8", "id"],
+        ["name=symptom8", "name"],
+        ["xpath=//input[@id='symptom8']", "xpath:attributes"],
+        ["xpath=//form[@id='symptomForm']/div/input[15]", "xpath:idRelative"],
+        ["xpath=//input[15]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "389eca0b-ffb9-468e-bb0e-05cfae745487",
+      "comment": "",
+      "command": "click",
+      "target": "id=symptom9",
+      "targets": [
+        ["id=symptom9", "id"],
+        ["name=symptom9", "name"],
+        ["xpath=//input[@id='symptom9']", "xpath:attributes"],
+        ["xpath=//form[@id='symptomForm']/div/input[17]", "xpath:idRelative"],
+        ["xpath=//input[17]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cce5e4c0-dafb-42b1-ad4b-d7a7a53a9e9b",
+      "comment": "",
+      "command": "click",
+      "target": "id=symptom10",
+      "targets": [
+        ["id=symptom10", "id"],
+        ["name=symptom10", "name"],
+        ["xpath=//input[@id='symptom10']", "xpath:attributes"],
+        ["xpath=//form[@id='symptomForm']/div/input[19]", "xpath:idRelative"],
+        ["xpath=//input[19]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "75dab2d9-d8e9-4a56-a0f4-6ac4dd5e7a9b",
+      "comment": "",
+      "command": "click",
+      "target": "id=symptom11",
+      "targets": [
+        ["id=symptom11", "id"],
+        ["name=symptom11", "name"],
+        ["xpath=//input[@id='symptom11']", "xpath:attributes"],
+        ["xpath=//form[@id='symptomForm']/div/input[21]", "xpath:idRelative"],
+        ["xpath=//input[21]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "74b71220-4271-46fe-b6dc-2dde6d2bed5f",
+      "comment": "",
+      "command": "click",
+      "target": "id=symptom12",
+      "targets": [
+        ["id=symptom12", "id"],
+        ["name=symptom12", "name"],
+        ["xpath=//input[@id='symptom12']", "xpath:attributes"],
+        ["xpath=//form[@id='symptomForm']/div/input[23]", "xpath:idRelative"],
+        ["xpath=//input[23]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cf60920d-daa7-445a-9a8f-b515856dad37",
+      "comment": "",
+      "command": "click",
+      "target": "id=symptom13",
+      "targets": [
+        ["id=symptom13", "id"],
+        ["name=symptom13", "name"],
+        ["xpath=//input[@id='symptom13']", "xpath:attributes"],
+        ["xpath=//form[@id='symptomForm']/div/input[25]", "xpath:idRelative"],
+        ["xpath=//input[25]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "66fa07fc-6c4c-4fc1-b46d-96d199eb90fa",
+      "comment": "",
+      "command": "click",
+      "target": "id=symptom14",
+      "targets": [
+        ["id=symptom14", "id"],
+        ["name=symptom14", "name"],
+        ["xpath=//input[@id='symptom14']", "xpath:attributes"],
+        ["xpath=//form[@id='symptomForm']/div/input[27]", "xpath:idRelative"],
+        ["xpath=//input[27]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4e35b705-c3d4-4d54-a988-8a35907300bc",
+      "comment": "",
+      "command": "click",
+      "target": "id=symptom15",
+      "targets": [
+        ["id=symptom15", "id"],
+        ["name=symptom15", "name"],
+        ["xpath=//input[@id='symptom15']", "xpath:attributes"],
+        ["xpath=//form[@id='symptomForm']/div/input[29]", "xpath:idRelative"],
+        ["xpath=//input[29]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4e014391-9742-41f6-88d0-58d1b32a2282",
+      "comment": "",
+      "command": "click",
+      "target": "id=symptom16",
+      "targets": [
+        ["id=symptom16", "id"],
+        ["name=symptom16", "name"],
+        ["xpath=//input[@id='symptom16']", "xpath:attributes"],
+        ["xpath=//form[@id='symptomForm']/div/input[31]", "xpath:idRelative"],
+        ["xpath=//input[31]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "71d15cf6-50fb-465a-9d4f-4ba5855efb78",
+      "comment": "",
+      "command": "click",
+      "target": "id=symptom17",
+      "targets": [
+        ["id=symptom17", "id"],
+        ["name=symptom17", "name"],
+        ["xpath=//input[@id='symptom17']", "xpath:attributes"],
+        ["xpath=//form[@id='symptomForm']/div/input[33]", "xpath:idRelative"],
+        ["xpath=//input[33]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6f0efdbb-d122-4823-a6f9-8ac42d2f1aac",
+      "comment": "",
+      "command": "click",
+      "target": "id=covid-contact1",
+      "targets": [
+        ["id=covid-contact1", "id"],
+        ["name=contact1", "name"],
+        ["xpath=//input[@id='covid-contact1']", "xpath:attributes"],
+        ["xpath=//form[@id='symptomForm']/div/input[35]", "xpath:idRelative"],
+        ["xpath=//input[35]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7094c8c6-6620-4bf9-926f-6e92c5db67f9",
+      "comment": "",
+      "command": "click",
+      "target": "id=covid-contact2",
+      "targets": [
+        ["id=covid-contact2", "id"],
+        ["name=contact2", "name"],
+        ["xpath=//input[@id='covid-contact2']", "xpath:attributes"],
+        ["xpath=//form[@id='symptomForm']/div/input[37]", "xpath:idRelative"],
+        ["xpath=//input[37]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3cd7692f-96a5-464d-b561-bef3428e5c3d",
+      "comment": "",
+      "command": "click",
+      "target": "id=covid-contact3",
+      "targets": [
+        ["id=covid-contact3", "id"],
+        ["name=contact3", "name"],
+        ["xpath=//input[@id='covid-contact3']", "xpath:attributes"],
+        ["xpath=//form[@id='symptomForm']/div/input[39]", "xpath:idRelative"],
+        ["xpath=//input[39]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7ceae743-377f-447e-b2df-63476f7a59ed",
+      "comment": "",
+      "command": "click",
+      "target": "id=submitSymptomform-btn",
+      "targets": [
+        ["id=submitSymptomform-btn", "id"],
+        ["css=#submitSymptomform-btn", "css:finder"],
+        ["xpath=//button[@id='submitSymptomform-btn']", "xpath:attributes"],
+        ["xpath=//form[@id='symptomForm']/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Submit Form')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ab61adfc-e1be-47ce-860c-fa3c7bbbd147",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.email-sent-div",
+      "targets": [
+        ["css=.email-sent-div", "css:finder"],
+        ["xpath=//div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "8a8412dc-7c42-4df3-a0b2-f22439251cc5",
+    "name": "successful video call login",
+    "commands": [{
+      "id": "fc9e4a29-950e-450b-87d4-d15ca4b787dc",
+      "comment": "",
+      "command": "open",
+      "target": "https://localhost:3000/0173aef0-8349-4da7-ae5d-3f5bd54f81e7/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fe3dcbfe-4b6e-4771-aded-06994f749f75",
+      "comment": "",
+      "command": "type",
+      "target": "id=roomLoginPasswordField",
+      "targets": [
+        ["id=roomLoginPasswordField", "id"],
+        ["name=roomLoginPassword", "name"],
+        ["css=#roomLoginPasswordField", "css:finder"],
+        ["xpath=//input[@id='roomLoginPasswordField']", "xpath:attributes"],
+        ["xpath=//div[@id='roomLoginForm']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "ictmdx"
+    }, {
+      "id": "46251eb6-0c0d-493c-acc4-3eaaa7932de1",
+      "comment": "",
+      "command": "click",
+      "target": "id=roomLoginBtn",
+      "targets": [
+        ["id=roomLoginBtn", "id"],
+        ["css=#roomLoginBtn", "css:finder"],
+        ["xpath=//button[@id='roomLoginBtn']", "xpath:attributes"],
+        ["xpath=//div[@id='roomLoginForm']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Join Room')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f270d5f8-4fb1-466f-bc6f-97427aade346",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=video",
+      "targets": [
+        ["css=video", "css:finder"],
+        ["xpath=//div[@id='videoGrid']/video", "xpath:idRelative"],
+        ["xpath=//video", "xpath:position"]
+      ],
+      "value": "30000"
+    }]
+  }, {
+    "id": "14964797-4ee9-4a4f-b123-6d08adf3b50e",
+    "name": "video call messaging",
+    "commands": [{
+      "id": "ab4b51a5-a6df-4b8a-a515-3b235108d499",
+      "comment": "",
+      "command": "open",
+      "target": "https://localhost:3000/0173aef0-8349-4da7-ae5d-3f5bd54f81e7",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "235c041b-2be1-4a20-8dab-9d2f9bd08c6e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x744",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "240d1800-ebae-40fb-8393-08bed36ec772",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fa-comment-alt",
+      "targets": [
+        ["css=.fa-comment-alt", "css:finder"],
+        ["xpath=//div[@id='chatTextPopUpDiv']/i", "xpath:idRelative"],
+        ["xpath=//i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "28e162a5-ee60-457b-84a4-f530130648af",
+      "comment": "",
+      "command": "click",
+      "target": "id=chatMessageField",
+      "targets": [
+        ["id=chatMessageField", "id"],
+        ["css=#chatMessageField", "css:finder"],
+        ["xpath=//input[@id='chatMessageField']", "xpath:attributes"],
+        ["xpath=//div[@id='chatPopUp']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bf38cbd6-f972-46b9-8e4e-f33006cfe13c",
+      "comment": "",
+      "command": "type",
+      "target": "id=chatMessageField",
+      "targets": [
+        ["id=chatMessageField", "id"],
+        ["css=#chatMessageField", "css:finder"],
+        ["xpath=//input[@id='chatMessageField']", "xpath:attributes"],
+        ["xpath=//div[@id='chatPopUp']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "hello"
+    }, {
+      "id": "ba77bc12-1292-4b12-ae10-84cd42739593",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=chatMessageField",
+      "targets": [
+        ["id=chatMessageField", "id"],
+        ["css=#chatMessageField", "css:finder"],
+        ["xpath=//input[@id='chatMessageField']", "xpath:attributes"],
+        ["xpath=//div[@id='chatPopUp']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "128b2d97-94c5-4fef-a0ce-33606186c007",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.message",
+      "targets": [
+        ["css=.message", "css:finder"],
+        ["xpath=//ul[@id='messages']/li", "xpath:idRelative"],
+        ["xpath=//li", "xpath:position"]
+      ],
+      "value": "hello"
+    }]
+  }, {
+    "id": "c7dfa502-7694-4e60-9326-6bab0e1b1fbd",
+    "name": "group creation",
+    "commands": [{
+      "id": "6b4bb3bf-f7b5-449f-9238-ba4d88eb080d",
+      "comment": "",
+      "command": "open",
+      "target": "https://localhost:3000/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "01eb7540-71a6-4cb6-bb72-f02383b12875",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Create Group",
+      "targets": [
+        ["linkText=Create Group", "linkText"],
+        ["css=li:nth-child(6) > .s-sidebar__nav-link", "css:finder"],
+        ["xpath=//a[contains(@href, '/create-group')]", "xpath:href"],
+        ["xpath=//li[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Create Group')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8ba2bcf7-696d-485c-9870-dc004520efe7",
+      "comment": "",
+      "command": "click",
+      "target": "id=createGroupName",
+      "targets": [
+        ["id=createGroupName", "id"],
+        ["name=createGroupName", "name"],
+        ["css=#createGroupName", "css:finder"],
+        ["xpath=//input[@id='createGroupName']", "xpath:attributes"],
+        ["xpath=//form[@id='createGroupForm']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c8207d5f-baaf-4232-873f-49fb334096db",
+      "comment": "",
+      "command": "type",
+      "target": "id=createGroupName",
+      "targets": [
+        ["id=createGroupName", "id"],
+        ["name=createGroupName", "name"],
+        ["css=#createGroupName", "css:finder"],
+        ["xpath=//input[@id='createGroupName']", "xpath:attributes"],
+        ["xpath=//form[@id='createGroupForm']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "ict-group"
+    }, {
+      "id": "4c2e7b9a-1b77-4b74-b66f-94722293021a",
+      "comment": "",
+      "command": "click",
+      "target": "id=createGroupPassword",
+      "targets": [
+        ["id=createGroupPassword", "id"],
+        ["name=createGroupPassword", "name"],
+        ["css=#createGroupPassword", "css:finder"],
+        ["xpath=//input[@id='createGroupPassword']", "xpath:attributes"],
+        ["xpath=//form[@id='createGroupForm']/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b2e3e74-e016-4466-9fae-50319a3f6a90",
+      "comment": "",
+      "command": "type",
+      "target": "id=createGroupPassword",
+      "targets": [
+        ["id=createGroupPassword", "id"],
+        ["name=createGroupPassword", "name"],
+        ["css=#createGroupPassword", "css:finder"],
+        ["xpath=//input[@id='createGroupPassword']", "xpath:attributes"],
+        ["xpath=//form[@id='createGroupForm']/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "ictgrouppw"
+    }, {
+      "id": "6e0cf12f-543b-465c-9ec8-776e90f5ea6f",
+      "comment": "",
+      "command": "click",
+      "target": "id=createGroupBtn",
+      "targets": [
+        ["id=createGroupBtn", "id"],
+        ["css=#createGroupBtn", "css:finder"],
+        ["xpath=//button[@id='createGroupBtn']", "xpath:attributes"],
+        ["xpath=//form[@id='createGroupForm']/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Create Group')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "804523f4-7ecf-4d68-92c6-043cea63fe51",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.success-message",
+      "targets": [
+        ["css=.success-message", "css:finder"],
+        ["xpath=//form[@id='createGroupForm']/div/p[2]", "xpath:idRelative"],
+        ["xpath=//form/div/p[2]", "xpath:position"],
+        ["xpath=//p[contains(.,'Group created')]", "xpath:innerText"]
+      ],
+      "value": "Group created"
+    }]
+  }, {
+    "id": "1ad12727-387a-4fe9-adcd-e1183a7558df",
+    "name": "group login failure",
+    "commands": [{
+      "id": "74f9c623-f9fd-4a16-a21b-490710d51b3a",
+      "comment": "",
+      "command": "open",
+      "target": "https://localhost:3000/join-group",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "125637a5-95ad-4597-8702-7955fee304ec",
+      "comment": "",
+      "command": "type",
+      "target": "id=room",
+      "targets": [
+        ["id=room", "id"],
+        ["name=groupName", "name"],
+        ["css=#room", "css:finder"],
+        ["xpath=//input[@id='room']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "ict-group"
+    }, {
+      "id": "8ea22362-566a-4d7d-a019-fe9c544bb93d",
+      "comment": "",
+      "command": "type",
+      "target": "id=groupPasswordField",
+      "targets": [
+        ["id=groupPasswordField", "id"],
+        ["name=groupPassword", "name"],
+        ["css=#groupPasswordField", "css:finder"],
+        ["xpath=//input[@id='groupPasswordField']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "ictmdx"
+    }, {
+      "id": "312f17a5-5d20-44b4-be4e-2e664f90480c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.join-group-btn",
+      "targets": [
+        ["css=.join-group-btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Join Group')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c9d623af-ea4e-4078-82cc-e5e322a79b91",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.error-message",
+      "targets": [
+        ["css=.error-message", "css:finder"],
+        ["xpath=//form/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Incorrect details')]", "xpath:innerText"]
+      ],
+      "value": "Incorrect details"
+    }]
+  }, {
+    "id": "39305a2b-867c-4340-a688-cd42311eb858",
+    "name": "group login success",
+    "commands": [{
+      "id": "f247f442-8ea7-42a1-a412-d33e5e431c5e",
+      "comment": "",
+      "command": "open",
+      "target": "https://localhost:3000/join-group",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b4bdbb0d-bf23-4fa3-b730-5a9b6251ba76",
+      "comment": "",
+      "command": "type",
+      "target": "id=room",
+      "targets": [
+        ["id=room", "id"],
+        ["name=groupName", "name"],
+        ["css=#room", "css:finder"],
+        ["xpath=//input[@id='room']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "ict-group"
+    }, {
+      "id": "5a6aaeb1-27da-4380-a8a3-04c41a800e7a",
+      "comment": "",
+      "command": "type",
+      "target": "id=groupPasswordField",
+      "targets": [
+        ["id=groupPasswordField", "id"],
+        ["name=groupPassword", "name"],
+        ["css=#groupPasswordField", "css:finder"],
+        ["xpath=//input[@id='groupPasswordField']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "ictgrouppw"
+    }, {
+      "id": "7a5f459b-8615-42a2-a9a8-ca2cfbfbe764",
+      "comment": "",
+      "command": "click",
+      "target": "css=.join-group-btn",
+      "targets": [
+        ["css=.join-group-btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Join Group')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d263f52c-6f4e-45da-998e-d0e87bd24f60",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.chat-messages",
+      "targets": [
+        ["css=.chat-messages", "css:finder"],
+        ["xpath=//main/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "84f9f315-4a80-4c2c-a46f-07393c823ae9",
+    "name": "group message",
+    "commands": [{
+      "id": "73908739-738d-4c8c-afb8-b20159e06c47",
+      "comment": "",
+      "command": "open",
+      "target": "https://localhost:3000/group/ict-group",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "defe108b-db6d-4d9f-b2d3-abfe2a6c0173",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "031ae19a-b039-4974-a2f5-38ca7b97dd82",
+      "comment": "",
+      "command": "click",
+      "target": "id=msg",
+      "targets": [
+        ["id=msg", "id"],
+        ["css=#msg", "css:finder"],
+        ["xpath=//input[@id='msg']", "xpath:attributes"],
+        ["xpath=//form[@id='chat-form']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "56080243-e39f-4e21-b9ab-35554bf0e529",
+      "comment": "",
+      "command": "type",
+      "target": "id=msg",
+      "targets": [
+        ["id=msg", "id"],
+        ["css=#msg", "css:finder"],
+        ["xpath=//input[@id='msg']", "xpath:attributes"],
+        ["xpath=//form[@id='chat-form']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "hello"
+    }, {
+      "id": "2eec59d2-e3a1-435e-b9a6-51a4bb2547ee",
+      "comment": "",
+      "command": "click",
+      "target": "css=#chat-form > .btn",
+      "targets": [
+        ["css=#chat-form > .btn", "css:finder"],
+        ["xpath=//form[@id='chat-form']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "52eaf773-1e9c-412e-aa02-8de378690930",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.message",
+      "targets": [
+        ["css=.message", "css:finder"],
+        ["xpath=//div[2]/div", "xpath:position"]
+      ],
+      "value": "hello"
+    }]
+  }, {
+    "id": "8b2f0d38-961e-499a-85d3-a111bf184f72",
+    "name": "account management",
+    "commands": [{
+      "id": "fba0d6f1-7c03-4586-84c7-57bf2b47d7f3",
+      "comment": "",
+      "command": "open",
+      "target": "https://localhost:3000/account-management",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "83069f65-e93c-4516-92c0-f4d488b326a1",
+      "comment": "",
+      "command": "type",
+      "target": "id=updateFirstNameField",
+      "targets": [
+        ["id=updateFirstNameField", "id"],
+        ["name=updateFirstName", "name"],
+        ["css=#updateFirstNameField", "css:finder"],
+        ["xpath=//input[@id='updateFirstNameField']", "xpath:attributes"],
+        ["xpath=//form[@id='accountManagementForm']/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "New First Name"
+    }, {
+      "id": "42125f33-ce6c-4b4e-a8a6-0ede1b2447e2",
+      "comment": "",
+      "command": "type",
+      "target": "id=updateLastNameField",
+      "targets": [
+        ["id=updateLastNameField", "id"],
+        ["name=updateLastName", "name"],
+        ["css=#updateLastNameField", "css:finder"],
+        ["xpath=//input[@id='updateLastNameField']", "xpath:attributes"],
+        ["xpath=//form[@id='accountManagementForm']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "New Last Name"
+    }, {
+      "id": "203c8b4d-cd2b-4867-9b1e-b84875b61bdf",
+      "comment": "",
+      "command": "type",
+      "target": "id=updateUsernameField",
+      "targets": [
+        ["id=updateUsernameField", "id"],
+        ["name=updateUsername", "name"],
+        ["css=#updateUsernameField", "css:finder"],
+        ["xpath=//input[@id='updateUsernameField']", "xpath:attributes"],
+        ["xpath=//form[@id='accountManagementForm']/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "newusername"
+    }, {
+      "id": "35fb588b-0b3c-47e4-8dc4-01e20695fce5",
+      "comment": "",
+      "command": "type",
+      "target": "id=updatePasswordField",
+      "targets": [
+        ["id=updateConfirmPasswordField", "id"],
+        ["name=updateConfirmPassword", "name"],
+        ["css=#updateConfirmPasswordField", "css:finder"],
+        ["xpath=//input[@id='updateConfirmPasswordField']", "xpath:attributes"],
+        ["xpath=//form[@id='accountManagementForm']/div/div[5]/input", "xpath:idRelative"],
+        ["xpath=//div[5]/input", "xpath:position"]
+      ],
+      "value": "newpassword"
+    }, {
+      "id": "589b28ad-8a97-4cdb-bdea-c98f6a2dbf0b",
+      "comment": "",
+      "command": "type",
+      "target": "id=updateConfirmPasswordField",
+      "targets": [
+        ["id=updateConfirmPasswordField", "id"],
+        ["name=updateConfirmPassword", "name"],
+        ["css=#updateConfirmPasswordField", "css:finder"],
+        ["xpath=//input[@id='updateConfirmPasswordField']", "xpath:attributes"],
+        ["xpath=//form[@id='accountManagementForm']/div/div[5]/input", "xpath:idRelative"],
+        ["xpath=//div[5]/input", "xpath:position"]
+      ],
+      "value": "newpassword"
+    }, {
+      "id": "ee170016-71d8-43a5-8e34-150ef65078d7",
+      "comment": "",
+      "command": "click",
+      "target": "id=upload",
+      "targets": [
+        ["id=upload", "id"],
+        ["css=#upload", "css:finder"],
+        ["xpath=//input[@id='upload']", "xpath:attributes"],
+        ["xpath=//form[@id='accountManagementForm']/div/div[6]/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ee84fe9b-3d7f-4c8e-90f5-c41ba01947a0",
+      "comment": "",
+      "command": "type",
+      "target": "id=updateProfilePictureField",
+      "targets": [
+        ["id=updateProfilePictureField", "id"],
+        ["name=updateProfilePicture", "name"],
+        ["css=#updateProfilePictureField", "css:finder"],
+        ["xpath=//input[@id='updateProfilePictureField']", "xpath:attributes"],
+        ["xpath=//form[@id='accountManagementForm']/div/div[6]/div/input", "xpath:idRelative"],
+        ["xpath=//div[6]/div/input", "xpath:position"]
+      ],
+      "value": "C:\\profilepic.jpg"
+    }, {
+      "id": "88f25471-000c-4e6a-ae03-430e1e8ae06c",
+      "comment": "",
+      "command": "click",
+      "target": "id=accountManagementBtn",
+      "targets": [
+        ["id=accountManagementBtn", "id"],
+        ["css=#accountManagementBtn", "css:finder"],
+        ["xpath=//button[@id='accountManagementBtn']", "xpath:attributes"],
+        ["xpath=//form[@id='accountManagementForm']/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Confirm Changes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cd8ab60c-ddf5-406c-b52e-f390b949805a",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.login-container",
+      "targets": [
+        ["css=.login-container", "css:finder"],
+        ["xpath=//div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "3ccb642d-a66f-407d-8da5-d4aea6664644",
+    "name": "Unsuccessful video call login",
+    "commands": [{
+      "id": "5ad2f148-a5eb-43a0-bf25-5ea03d9a3c9b",
+      "comment": "",
+      "command": "open",
+      "target": "https://localhost:3000/a4be4ce9-1f27-4a2a-bfb8-8be88067aa93/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0ad208c6-9087-4617-96de-cf067ecdc398",
+      "comment": "",
+      "command": "type",
+      "target": "id=roomLoginPasswordField",
+      "targets": [
+        ["id=roomLoginPasswordField", "id"],
+        ["name=roomLoginPassword", "name"],
+        ["css=#roomLoginPasswordField", "css:finder"],
+        ["xpath=//input[@id='roomLoginPasswordField']", "xpath:attributes"],
+        ["xpath=//div[@id='roomLoginForm']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "wrongpw"
+    }, {
+      "id": "0464a86a-94cd-4fff-b928-9d433d78dfeb",
+      "comment": "",
+      "command": "click",
+      "target": "id=roomLoginBtn",
+      "targets": [
+        ["id=roomLoginBtn", "id"],
+        ["css=#roomLoginBtn", "css:finder"],
+        ["xpath=//button[@id='roomLoginBtn']", "xpath:attributes"],
+        ["xpath=//div[@id='roomLoginForm']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Join Room')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7531369c-6d18-4946-b295-23e84101f3a4",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=roomLoginResult",
+      "targets": [
+        ["id=roomLoginResult", "id"],
+        ["css=#roomLoginResult", "css:finder"],
+        ["xpath=//p[@id='roomLoginResult']", "xpath:attributes"],
+        ["xpath=//div[@id='roomLoginForm']/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Incorrect Password')]", "xpath:innerText"]
+      ],
+      "value": "Incorrect Password"
+    }]
+  }],
+  "suites": [{
+    "id": "683c3889-2ae1-47cf-b3f0-e1bd86f24806",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["e9dd6de4-cc5c-4e58-a02c-58caf99926ea"]
+  }],
+  "urls": ["https://localhost:3000/", "https://localhost:3000/register", "https://localhost:3000/register-school", "https://localhost:3000/join-lecture", "https://localhost:3000/join-group", "https://localhost:3000/group/ict-group", "https://localhost:3000/account-management", "https://localhost:3000/a4be4ce9-1f27-4a2a-bfb8-8be88067aa93"],
+  "plugins": []
+}

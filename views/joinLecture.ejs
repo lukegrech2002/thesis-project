@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Lecture Enrollment | Scorona</title>
+    <link rel="stylesheet" type="text/css" href="css/joinLecture.css"> 
+    <script src="https://kit.fontawesome.com/12bb37a688.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar-div">
+            <%- include('partials/navbar') %>
+        </div>
+        <div class="join-lecture-div-container">
+            <h1>Lecture Menu</h1>
+            <div class="top-container">
+                <div class="search-container">
+                    <form id="lectureSearchForm" action="/join-lecture/search" method="GET">
+                        <input type="text" id="findLectureSubject" name="findLectureSubject" placeholder="Enter Subject" required>
+                        <button class="find-lecture-btn" id="findLectureBtn" type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="dropdown-div">
+                    <div class="dropdown">
+                        <button class="dropbtn">Sort Lectures</button>
+                        <div class="dropdown-content">
+                            <button onclick="sortLocationAscending()">Location Ascending</button>
+                            <button onclick="sortLocationDescending()">Location Descending</button>
+                            <button onclick="sortClassAscending()">Class Ascending</button>
+                            <button onclick="sortClassDescending()">Class Descending</button>
+                            <button onclick="sortSubjectAscending()">Subject Ascending</button>
+                            <button onclick="sortSubjectDescending()">Subject Descending</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Lectures Table -->
+            <table id="lecturesTable">
+                <thead>
+                    <tr>
+                        <th>School</th>
+                        <th>Location</th>
+                        <th>Class</th>
+                        <th>Subject</th>
+                        <th>Teacher</th>
+                        <th>Date</th>
+                        <th>Start Time</th>
+                        <th>End Time</th>
+                        <th>Additional Notes</th>								
+                    </tr>
+                <thead>
+                <tbody id="lecturesTableData">
+                    <% if(data.length){ %>
+                            <% for(let i = 0; i < data.length; i++) { %>
+                                <tr>
+                                    <td><%=data[i].school%></td>
+                                    <td><%=data[i].location%></td>
+                                    <td><%=data[i].class%></td>
+                                    <td><%=data[i].subject%></td>
+                                    <td><%=data[i].teacher_name%></td>
+                                    <td><%=data[i].date%></td>
+                                    <td><%=data[i].start_time%></td>
+                                    <td><%=data[i].end_time%></td>
+                                    <td><%=data[i].additional_notes%></td>
+                                </tr>
+                            <% } %>
+                    <% }else{ %>
+                        <tr>
+                            <td>No Lessons</td>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<script>
+    const tbody = document.getElementById("lecturesTableData");
+    function tableSort(colNum, cmp) {
+    let rows = [...tbody.rows];
+        rows.sort((a, b) => cmp(a.cells[colNum].textContent, b.cells[colNum].textContent))
+        .map(row => tbody.appendChild(row));
+    }
+
+    function sortClassAscending() {
+        tableSort(0, (a, b) => a - b);
+    }
+
+    function sortClassDescending() {
+        tableSort(0, (a, b) => b - a);
+    }
+
+    function sortLocationAscending() {
+        tableSort(1, (a, b) => a.localeCompare(b));
+    }
+
+    function sortLocationDescending() {
+        tableSort(1, (a, b) => b.localeCompare(a));
+    }
+
+    function sortSubjectAscending() {
+        tableSort(1, (a, b) => a.localeCompare(b));
+    }
+
+    function sortSubjectDescending() {
+        tableSort(1, (a, b) => b.localeCompare(a));
+    }
+</script>
+</html>
