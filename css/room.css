@@ -1,0 +1,426 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  color: white;
+  overflow: hidden;
+}
+
+.container {
+  display: grid; 
+  grid-template-columns: 1fr 2.5fr repeat(8, 0.5fr) 2.5fr 1fr;
+  grid-template-rows: 0.175fr 1.825fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: 100vh;
+  max-height: 100vh;
+}
+
+.time-elapsed-div {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.space-div-left {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.chat-btn-div {
+  grid-area: 1 / 3 / 2 / 4;
+}
+.record-btn-div {
+  grid-area: 1 / 4 / 2 / 5;
+}
+.share-screen-btn-div {
+  grid-area: 1 / 5 / 2 / 6;
+}
+.copy-link-btn-div {
+  grid-area: 1 / 6 / 2 / 7; 
+}
+.mute-unmute-btn-div {
+  grid-area: 1 / 7 / 2 / 8;
+}
+.play-stop-btn-div {
+  grid-area: 1 / 8 / 2 / 9;
+}
+.lecture-info-btn-div{
+  grid-area: 1 / 9 / 2 / 10;
+}
+.participants-btn-div {
+  grid-area: 1 / 10 / 2 / 11;
+}
+.space-div-right {
+  grid-area: 1 / 11 / 2 / 12;
+}
+.end-call-btn-div {
+  grid-area: 1 / 12 / 2 / 13; 
+}
+
+/* Refresh notification */
+.connection-popup {
+  background-color: rgba(20, 20, 20, 0.9);
+  min-height: 26px;
+  font-size: 14px;
+  color: #ccc;
+  line-height: 26px;
+  padding: 0.75em 0.5em;
+  width: 45%;
+  position: absolute;
+  left: 50%;
+  top: 15%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  z-index: 9999;
+  text-align: center;
+  display: none;
+}
+
+.connection-popup a {
+  color: #4b8ee7;
+  text-decoration: none;
+}
+
+/* .line {
+  border-left: 2px solid rgb(73, 69, 69);
+  height: 1.5em;
+  position: absolute;
+  left: 50%;
+  margin-left: 1.25em;
+  top: 0.4em;
+} */
+
+.chat-btn-div,
+.mute-unmute-btn-div,
+.play-stop-btn-div,
+.end-call-btn-div,
+.participants-btn-div,
+.lecture-info-btn-div,
+.time-elapsed-div,
+.space-div-left,
+.space-div-right,
+.share-screen-btn-div,
+.extra-btn-div,
+.record-btn-div,
+.copy-link-btn-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 24px;
+  background-color: #0a0a0a;
+}
+
+#videoGrid {
+  background-color: #dfe3ee;
+  justify-content: center;
+  grid-area: 2 / 1 / 6 / 13;
+  display: flex;
+  flex-wrap: wrap;
+  height: 91.5vh;
+  max-height: 91.5vh;
+  align-content: center;
+  vertical-align: middle;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  z-index: -1;
+}
+
+video {
+  position: relative;
+  vertical-align: middle;
+  align-self: center;
+  overflow: hidden;
+  display: inline-block;
+  animation: show 0.4s ease;
+  height: 30em;
+  max-height: 30em;
+}
+
+video:after {
+  font-size: 13px;
+  position: absolute;
+  bottom: 20px;
+  right: 23px;
+  font-weight: 100;
+  content: "4:3";
+  display: block;
+}
+
+video:before {
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  transform: rotate(-37deg);
+  top: 50%;
+  font-weight: 100;
+  content: "4:3";
+  display: block;
+}
+
+.time-elapsed-div{
+  justify-content: left;
+}
+
+.time-elapsed-div span {
+  font-size: 1em;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: 1em;
+  font-weight: 500;
+  color: #fff;
+}
+
+.fa,
+.fas,
+.far {
+  font-size: 0.8em;
+}
+
+.chat-btn-div i:hover,
+.share-screen-btn-div i:hover,
+.participants-btn-div i:hover,
+.lecture-info-btn-div i:hover,
+.copy-link-btn-div i:hover {
+  color: #7e8186;
+}
+
+.circle-btn {
+  padding-bottom: 0.25em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  background-color: #c90000;
+  border-radius: 0.075em;
+}
+
+.circle-btn span {
+  font-size: 0.75em;
+  font-weight: 500;
+  color: #fff;
+}
+
+.space-div-left {
+  font-size: 1em;
+}
+
+/* Lecture Info Pop Up */
+.lecture-info-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  color: black;
+}
+
+.lecture-info-modal-content h2 {
+  text-align: center;
+  margin-bottom: 0.75em;
+  font-weight: 500;
+}
+
+.lecture-info-modal-content p {
+  margin-bottom: 0.25em;
+}
+
+.lecture-info-modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+} 
+
+.messages {
+  color: whitesmoke;
+  list-style: none;
+}
+
+/* Add styles to the form container */
+.chat-popup {
+  height: 100%;
+  position: fixed;
+  width: 0;
+  background-color: #111;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.chat-title-div {
+  background-color: #0a0a0a;
+  height: 3.5em;
+}
+
+.chat-title-div > h3 {
+  padding-top: 1em;
+  text-align: center;
+  font-weight: 500;
+}
+
+.messages {
+  padding: 0.5em;
+}
+
+#chatMessageField {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 1em;
+  background-color: #0a0a0a;
+  color: #fff;
+  outline: none;
+}
+
+li > button {
+  background-color: transparent;
+  cursor: pointer;
+  float: right;
+  color: #c90000;
+}
+
+.unmute,
+.stop {
+  color: #c90000;
+}
+
+/* Participants Sidebar */
+.participants-sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.25s;
+}
+
+.participants-sidebar h3 {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: 0.95em;
+  font-size: 0.8em;
+  font-weight: 500;
+  text-align: center;
+}
+
+.participants-sidebar li {
+  list-style: none;
+  margin-left: 1em;
+  font-size: 0.5em;
+  margin-bottom: 1em;
+}
+
+.participants-sidebar p {
+  font-size: 0.75em;
+}
+
+.participants-profile-pic {
+  height: 1.25em;
+  width: 1.25em;
+  border-radius: 50%;
+  float: left; 
+  margin-top: 0.3em;
+  margin-right: 0.5em;
+  margin-left: 0.5em;
+}
+
+/* Text Dropdowns */
+.participants-text-popup-div,
+.raise-hand-text-popup-div,
+.play-stop-text-popup-div,
+.mute-unmute-text-popup-div,
+.share-screen-text-popup-div,
+.lecture-info-text-popup-div,
+.chat-text-popup-div,
+.record-text-popup-div,
+.copy-link-text-popup-div {
+  position: relative;
+  display: inline-block;
+}
+
+.participants-btn-div > .participants-text-popup-div > .participants-text,
+.raise-hand-btn-div > .raise-hand-text-popup-div > .raise-hand-text,
+.play-stop-btn-div > .play-stop-text-popup-div > .play-stop-text,
+.mute-unmute-btn-div > .mute-unmute-text-popup-div > .mute-unmute-text,
+.share-screen-btn-div > .share-screen-text-popup-div > .share-screen-text,
+.lecture-info-btn-div > .lecture-info-text-popup-div > .lecture-info-text,
+.chat-btn-div > .chat-text-popup-div > .chat-text,
+.record-btn-div > .record-text-popup-div > .record-text,
+.copy-link-btn-div > .copy-link-text-popup-div > .copy-link-text{
+  visibility: hidden;
+  font-size: 0.75em;
+  width: 120px;
+  background-color: #38383b;
+  color: #fff;
+  text-align: center;
+  border-radius: 0.25em;
+  padding: 5px 2px;
+  position: absolute;
+  z-index: 1;
+  top: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.participants-btn-div > .participants-text-popup-div .participants-text::after,
+.raise-hand-btn-div > .raise-hand-text-popup-div .raise-hand-text::after,
+.play-stop-btn-div > .play-stop-text-popup-div .play-stop-text::after,
+.mute-unmute-btn-div > .mute-unmute-text-popup-div .mute-unmute-text::after,
+.share-screen-btn-div > .share-screen-text-popup-div .share-screen-text::after,
+.lecture-info-btn-div
+  > .lecture-info-text-popup-div
+  > .lecture-info-text::after,
+.chat-btn-div > .chat-text-popup-div .chat-text::after
+.record-btn-div > .record-text-popup-div > .record-text::after,
+.copy-link-btn-div > .copy-link-text-popup-div > .copy-link-text::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #38383b transparent;
+}
+
+.participants-btn-div > .participants-text-popup-div:hover .participants-text,
+.raise-hand-btn-div > .raise-hand-text-popup-div:hover .raise-hand-text,
+.play-stop-btn-div > .play-stop-text-popup-div:hover .play-stop-text,
+.mute-unmute-btn-div > .mute-unmute-text-popup-div:hover .mute-unmute-text,
+.share-screen-btn-div > .share-screen-text-popup-div:hover .share-screen-text,
+.lecture-info-btn-div > .lecture-info-text-popup-div:hover > .lecture-info-text,
+.chat-btn-div > .chat-text-popup-div:hover .chat-text,
+.record-btn-div > .record-text-popup-div:hover > .record-text,
+.copy-link-btn-div > .copy-link-text-popup-div:hover > .copy-link-text {
+  visibility: visible;
+}
